@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Envirofit</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/app.0.1.min.css" />
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+    
+    <section class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="index.html"><h4>Envirofit | CRM</h4></a>
+            </div>
+            <div class="col-sm-9">
+                <ul class="navigation list-inline">
+                    <li class=""><a href="tickets.html" class="">Tickets</a></li>
+                    <li class=""><a href="sales.html" class="">Sales</a></li>
+                    <li class=""><a href="customers.html" class="">Customers</a></li>
+                    <li class=""><a href="transactions.html" class="">Transactions</a></li>
+                    <li class=""><a href="products.html" class="">Products</a></li>
+                    <li class=""><a href="sms.html" class="">SMS</a></li>
+                    <li class=""><a href="reports.html" class="">Reports</a></li>
+                    <li class=" active "><a href="agents.html" class="">Agents</a></li>
+                    <li class="">
+                        <a href="#" class="" data-toggle="dropdown">Admin <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="users.html">Users</a></li>
+                            <li><a href="change-password.html">Change Password</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="content container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3 class="padding-bottom-md">Agents <span class="pull-right"><button class="btn bg-primary btn-sm" data-toggle="modal" data-target="#agent-new"><strong>+ New</strong></button></span></h3>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Agent</th>
+                    <th>Phone</th>
+                    <th>Region</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="bg-info">
+                    <td><a href="#"><strong>Margaret Kilo</strong></a></td>
+                    <td>0712 345678</td>
+                    <td>Nairobi Area</td>
+                </tr>
+                <tr class="">
+                    <td><a href="#"><strong>Margaret Kilo</strong></a></td>
+                    <td>0712 345678</td>
+                    <td>Nairobi Area</td>
+                </tr>
+                <tr class="">
+                    <td><a href="#"><strong>Margaret Kilo</strong></a></td>
+                    <td>0712 345678</td>
+                    <td>Nairobi Area</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <nav aria-label="" class="text-center full-width">
+    <ul class="pagination">
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+        <li class="disabled"><a href="#">...</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>
+        </div>
+        <div class="col-sm-8 padding-md border bg-white height-lg">
+            <div class="row">
+                <div class="col-sm-6 padding-bottom-lg">
+                    <h3>Margaret Kilo <br /><small><span class="label label-success">Active</span></small></h3>
+                </div>
+                <div class="col-sm-6 padding-bottom-lg text-right">
+                    <button class="btn btn-danger">Deactivate Agent</button>
+                </div>
+                <div class="col-sm-12">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#sales" role="tab" data-toggle="tab">Sales</a></li>
+                        <li role="presentation"><a href="#assigned-products" role="tab" data-toggle="tab">Assigned Products</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="sales">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Customer</th>
+                                    <th>Product</th>
+                                    <th>Serial</th>
+                                    <th>Date</th>
+                                    <th class="text-right">Amount</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td><a href="#">Mary Wambui</a></td>
+                                    <td><a href="#">Envirofit Smartsaver Wood Jiko</a></td>
+                                    <td>EUI909009</td>
+                                    <td>23 March 2017</td>
+                                    <td class="text-right">900</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="assigned-products">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th class="text-center"><input type="checkbox" /></th>
+                                    <th>Serial Number</th>
+                                    <th>Status</th>
+                                    <th>Date Added</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center"><input type="checkbox" /></td>
+                                    <td>ERIP90090</td>
+                                    <td>Dispatched</td>
+                                    <td>3 April 2017</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="agent-new">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Agent</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input class="form-control input-lg" placeholder="Enter Name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input class="form-control" placeholder="Enter Phone Number" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>ID Number</label>
+                        <input class="form-control" placeholder="Enter ID Number" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Deactivate Agent</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+</body>
+</html>

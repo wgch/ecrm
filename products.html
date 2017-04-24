@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Envirofit</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/app.0.1.min.css" />
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+    
+    <section class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="index.html"><h4>Envirofit | CRM</h4></a>
+            </div>
+            <div class="col-sm-9">
+                <ul class="navigation list-inline">
+                    <li class=""><a href="tickets.html" class="">Tickets</a></li>
+                    <li class=""><a href="sales.html" class="">Sales</a></li>
+                    <li class=""><a href="customers.html" class="">Customers</a></li>
+                    <li class=""><a href="transactions.html" class="">Transactions</a></li>
+                    <li class=" active "><a href="products.html" class="">Products</a></li>
+                    <li class=""><a href="sms.html" class="">SMS</a></li>
+                    <li class=""><a href="reports.html" class="">Reports</a></li>
+                    <li class=""><a href="agents.html" class="">Agents</a></li>
+                    <li class="">
+                        <a href="#" class="" data-toggle="dropdown">Admin <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="users.html">Users</a></li>
+                            <li><a href="change-password.html">Change Password</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="top-nav container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3>Products</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="content container">
+        <div class="row">
+            <div class="">
+                <ul class="col-sm-3 nav nav-pills nav-stacked margin-bottom-lg" role="tablist">
+                    <li role="presentation" class="active"><a href="#tab-001" data-toggle="tab">Envirofit Supersaver Charcoal Jiko</a></li>
+                    <li role="presentation"><a href="#tab-002" data-toggle="tab">Envirofit Smartsaver Jiko</a></li>
+                    <li role="presentation"><a href="#tab-003" data-toggle="tab">Envirofit Supersaver Wood Jiko</a></li>
+                    <li class="padding-top-lg"><button class="btn bg-primary btn-block" data-toggle="modal" data-target="#product-new">+ New Product</button></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 tab-content">
+                <div role="tabpanel" class="tab-pane active" id="tab-001">
+                    <h4 class="padding-bottom-md"><strong>Envirofit Supersaver Charcoal Jiko</strong></h4>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" ><a href="#pricing" role="tab" data-toggle="tab">Pricing</a></li>
+                        <li role="presentation" class="active"><a href="#dispatch" role="tab" data-toggle="tab">Dispatch</a></li>
+                        <li role="presentation"><a href="#assign" role="tab" data-toggle="tab">Assign Agent</a></li>
+                        <li role="presentation"><a href="#serials" role="tab" data-toggle="tab">Serials</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane" id="pricing">
+                            <div class="top-actions">
+                                <div class="form-group">
+                                    <label for="" class="">New Pricing</label>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <select class="form-control">
+                                                <option>Sales Type</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <input class="form-control" placeholder="Base Price"/>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <input class="form-control" placeholder="Min Price"/>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <input class="form-control" placeholder="Max Price"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <input class="form-control" placeholder="Expiry"/>
+                                        </div>
+                                        <div class="col-sm-12 padding-top-md">
+                                            <button class="btn bg-primary pull-right">Add Pricing</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Sales Type</th>
+                                    <th class="text-right">Base Price</th>
+                                    <th class="text-right">Min. Price</th>
+                                    <th class="text-right">Max. Price</th>
+                                    <th>Date Added</th>
+                                    <th>Expiry Date</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td>Pay As You Go</td>
+                                    <td class="text-right">900</td>
+                                    <td class="text-right">35</td>
+                                    <td class="text-right">200</td>
+                                    <td>Today</td>
+                                    <td>20 January 2019</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane active" id="dispatch">
+                            <div class="top-actions">
+                                <div class="form-inline">
+                                    <label for="" class="padding-right-md">New Product Dispatch</label>
+                                    <input type="text" class="form-control margin-right-md" id="" placeholder="Enter Serial Number">
+                                    <select class="form-control">
+                                        <option>Select Agents</option>
+                                    </select>
+                                    <button class="btn bg-primary margin-left-lg pull-right">Dispatch</button>
+                                </div>
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Serial Number</th>
+                                    <th>Status</th>
+                                    <th>Date Added</th>
+                                    <th>Destination Group</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td>ER788989</td>
+                                    <td>Dispatched</td>
+                                    <td>3 April 2017</td>
+                                    <td>Nairobi Group</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <nav aria-label="" class="text-center full-width">
+    <ul class="pagination">
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+        <li class="disabled"><a href="#">...</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="assign">
+                            <div class="top-actions">
+                                <div class="form-inline">
+                                    <label for="" class="padding-right-md">Assign Serial Number</label>
+                                    <select class="form-control">
+                                        <option>Select Serial Number</option>
+                                    </select>
+                                    <select class="form-control">
+                                        <option>Select Agent</option>
+                                    </select>
+                                    <button class="btn bg-primary margin-left-lg pull-right">Assign</button>
+                                </div>
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th class="text-center"><input type="checkbox" /></th>
+                                    <th>Serial Number</th>
+                                    <th>Status</th>
+                                    <th>Date Added</th>
+                                    <th>Agent Name</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td class="text-center"><input type="checkbox" /></td>
+                                    <td>ERIP90090</td>
+                                    <td>Dispatched</td>
+                                    <td>3 April 2017</td>
+                                    <td>Agnes Wambui</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <nav aria-label="" class="text-center full-width">
+    <ul class="pagination">
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+        <li class="disabled"><a href="#">...</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="serials">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Serial Number</th>
+                                    <th>Status</th>
+                                    <th>Date Added</th>
+                                    <th>Agent Name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td>ERIP90090</td>
+                                    <td>Warehouse, Sold, Allocated, Pending Sales</td>
+                                    <td>3 April 2017</td>
+                                    <td>Agnes Wambui</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <nav aria-label="" class="text-center full-width">
+    <ul class="pagination">
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+        <li class="disabled"><a href="#">...</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="tab-002"></div>
+            </div>
+        </div>
+    </section>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="product-new">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Product</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label>Product Name</label>
+                        <input class="form-control input-lg" placeholder="Enter title" />
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>Price</label>
+                                <input class="form-control" placeholder="Enter Base Price" />
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Image</label>
+                                <input class="form-control" placeholder="Enter ID" />
+                                <div class="bg-grey-light">
+                                    <img src="" class="full-width border-radius" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+</body>
+</html>

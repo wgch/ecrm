@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Envirofit</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/app.0.1.min.css" />
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+    
+    <section class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <a href="index.html"><h4>Envirofit | CRM</h4></a>
+            </div>
+            <div class="col-sm-9">
+                <ul class="navigation list-inline">
+                    <li class=""><a href="tickets.html" class="">Tickets</a></li>
+                    <li class=" active "><a href="sales.html" class="">Sales</a></li>
+                    <li class=""><a href="customers.html" class="">Customers</a></li>
+                    <li class=""><a href="transactions.html" class="">Transactions</a></li>
+                    <li class=""><a href="products.html" class="">Products</a></li>
+                    <li class=""><a href="sms.html" class="">SMS</a></li>
+                    <li class=""><a href="reports.html" class="">Reports</a></li>
+                    <li class=""><a href="agents.html" class="">Agents</a></li>
+                    <li class="">
+                        <a href="#" class="" data-toggle="dropdown">Admin <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="users.html">Users</a></li>
+                            <li><a href="change-password.html">Change Password</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="top-nav container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3>Sales</h3>
+            </div>
+            <div class="col-sm-9">
+                <div class="filter text-right full-width">
+    <ul class="list-inline">
+        
+        
+        <li><button class="btn btn-default btn-sm">List 10 <span class="caret"></span></button></li></li>
+        <li><input class="form-control input-sm" type="text" placeholder="Search" /></li>
+        <li><button class="btn btn-default btn-sm"><i class="fa fa-calendar"></i> <strong>January 1, 2017</strong> - <strong>April 1, 2017</strong> <span class="caret"></span> </button></li>
+        <li><button class="btn btn-info btn-sm"><strong>Export</strong></button></li>
+        
+        
+        <li><button class="btn bg-primary btn-sm" data-toggle="modal" data-target="#sales-new"><strong>+ New Sale</strong></button></li>
+        
+    </ul>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content container">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="text-center">#</th>
+                        <th>Customer</th>
+                        <th>ID & Phone Number</th>
+                        <th>Agent</th>
+                        <th>Type of Sale</th>
+                        <th>Product</th>
+                        <th>Date</th>
+                        <th class="text-right">Amount (KES)</th>
+                        <th>Completed</th>
+                        <th class="text-right">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-center">1</td>
+                        <td><a href="customers-details.html"><strong>Mary Wambui</strong></a></td>
+                        <td><i class="fa fa-phone"></i> 0712345678<br /><small><strong>ID: </strong> 23232323</small></td>
+                        <td><a href="agent-details.html"><strong>Wilfred Bond</strong></a></td>
+                        <td>Cash</td>
+                        <td><a href="product-details.html">Envirofit Smartsaver Wood Jiko</a></td>
+                        <td>Today</td>
+                        <td class="text-right">4,900</td>
+                        <td class="text-center"><i class="fa fa-check text-success"></i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2</td>
+                        <td><a href="customers-details.html"><strong>Monicah Were</strong></a></td>
+                        <td><i class="fa fa-phone"></i> 0712345678<br /><small><strong>ID: </strong> 23232323</small></td>
+                        <td><a href="agent-details.html"><strong>Wilfred Bond</strong></a></td>
+                        <td>PAYG</td>
+                        <td><a href="product-details.html">Envirofit Smartsaver Jiko</a></td>
+                        <td>23 Jan 2017</td>
+                        <td class="text-right">400</td>
+                        <td class="text-right"></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="" class="text-center full-width">
+    <ul class="pagination">
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+        <li class="disabled"><a href="#">...</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>
+            </div>
+        </div>
+    </section>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="sales-new">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Sale</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input class="form-control" placeholder="Enter title" />
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>ID Number</label>
+                                <input class="form-control" placeholder="Enter ID" />
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Phone Number</label>
+                                <input class="form-control" placeholder="Enter Phone Number" />
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="form-group">
+                        <label>Product</label>
+                        <select class="form-control">
+                            <option>Select Product</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>Enter Amount</label>
+                                <input class="form-control" placeholder="Enter Amount" />
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Enter Transaction ID</label>
+                                <input class="form-control" placeholder="Enter Transaction ID" />
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Transaction Date</label>
+                                <input class="form-control" type="date" placeholder="Enter Transaction Date" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Product Serial</label>
+                        <select class="form-control">
+                            <option>Select Serial</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+</body>
+</html>
