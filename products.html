@@ -67,8 +67,6 @@
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" ><a href="#pricing" role="tab" data-toggle="tab">Pricing</a></li>
                         <li role="presentation" class="active"><a href="#dispatch" role="tab" data-toggle="tab">Dispatch</a></li>
-                        <li role="presentation"><a href="#assign" role="tab" data-toggle="tab">Assign Agent</a></li>
-                        <li role="presentation"><a href="#serials" role="tab" data-toggle="tab">Serials</a></li>
                     </ul>
 
                     <div class="tab-content">
@@ -152,6 +150,7 @@
                                     <th>Status</th>
                                     <th>Date Added</th>
                                     <th>Destination Group</th>
+                                    <th>Agent</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -162,57 +161,16 @@
                                     <td>Dispatched</td>
                                     <td>3 April 2017</td>
                                     <td>Nairobi Group</td>
-                                    <td></td>
+                                    <td><a href="agents.html">Marion Were</a></td>
+                                    <td><button class="btn btn-success btn-sm" data-toggle="modal" data-target="#assign">Assign</button></td>
                                 </tr>
-                                </tbody>
-                            </table>
-                            <nav aria-label="" class="text-center full-width">
-    <ul class="pagination">
-        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-        <li class=""><a href="#">2</a></li>
-        <li class=""><a href="#">3</a></li>
-        <li class=""><a href="#">4</a></li>
-        <li class="disabled"><a href="#">...</a></li>
-        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-</nav>
-                        </div>
-
-                        <div role="tabpanel" class="tab-pane" id="assign">
-                            <div class="top-actions">
-                                <div class="form-inline">
-                                    <label for="" class="padding-right-md">Assign Serial Number</label>
-                                    <select class="form-control">
-                                        <option>Select Serial Number</option>
-                                    </select>
-                                    <select class="form-control">
-                                        <option>Select Agent</option>
-                                    </select>
-                                    <button class="btn bg-primary margin-left-lg pull-right">Assign</button>
-                                </div>
-                            </div>
-                            <table class="table table-bordered">
-                                <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th class="text-center"><input type="checkbox" /></th>
-                                    <th>Serial Number</th>
-                                    <th>Status</th>
-                                    <th>Date Added</th>
-                                    <th>Agent Name</th>
-                                    <th>Actions</th>
-                                </tr>
-                                </thead>
-                                <tbody>
                                 <tr>
                                     <td class="text-center">1</td>
-                                    <td class="text-center"><input type="checkbox" /></td>
-                                    <td>ERIP90090</td>
+                                    <td>ER788989</td>
                                     <td>Dispatched</td>
                                     <td>3 April 2017</td>
-                                    <td>Agnes Wambui</td>
-                                    <td></td>
+                                    <td>Nairobi Group</td>
+                                    <td>Assigned</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -229,42 +187,8 @@
 </nav>
                         </div>
 
-                        <div role="tabpanel" class="tab-pane" id="serials">
-                            <table class="table table-bordered">
-                                <thead>
-                                <tr>
-                                    <th class="text-center">#</th>
-                                    <th>Serial Number</th>
-                                    <th>Status</th>
-                                    <th>Date Added</th>
-                                    <th>Agent Name</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td class="text-center">1</td>
-                                    <td>ERIP90090</td>
-                                    <td>Warehouse, Sold, Allocated, Pending Sales</td>
-                                    <td>3 April 2017</td>
-                                    <td>Agnes Wambui</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <nav aria-label="" class="text-center full-width">
-    <ul class="pagination">
-        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-        <li class=""><a href="#">2</a></li>
-        <li class=""><a href="#">3</a></li>
-        <li class=""><a href="#">4</a></li>
-        <li class="disabled"><a href="#">...</a></li>
-        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-</nav>
-                        </div>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane fade" id="tab-002"></div>
             </div>
         </div>
     </section>
@@ -295,6 +219,34 @@
                                     <img src="" class="full-width border-radius" />
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="assign">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Assign Serial #E3983983</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label>Select Agent</label>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">Marion Were</a>
+                            <a href="#" class="list-group-item">Augustus Martin</a>
+                            <a href="#" class="list-group-item">John Doe</a>
+                            <a href="#" class="list-group-item">Vestibulum Costa</a>
                         </div>
                     </div>
                 </div>
