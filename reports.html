@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/app.0.1.min.css" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
 <body>
@@ -49,11 +53,389 @@
                 <h3>Reports</h3>
             </div>
         </div>
+
+        <div class="row padding-top-md">
+            <div class="col-sm-3">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#support" role="tab" data-toggle="tab">Customer Support</a></li>
+                    <li class=""><a href="#sales" role="tab" data-toggle="tab">Sales</a></li>
+                    <li><a href="#transactions" role="tab" data-toggle="tab">Transactions</a></li>
+                    <li><a href="#payg" role="tab" data-toggle="tab">Pay As You Go Customers</a></li>
+                    <li><a href="#unknown" role="tab" data-toggle="tab">Unknown Payments</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 tab-content">
+                <div class="tab-pane active" id="support">
+                    <h3>Customer Support</h3>
+                    <div class="row padding-top-md">
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Tickets
+                                </div>
+                                <div class="panel-body">
+                                    <canvas id="open-closed-chart" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Raised
+                                </div>
+                                <div class="panel-body">
+                                    <h2>14</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Reply Time
+                                </div>
+                                <div class="panel-body">
+                                    <h2>00:00:00</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-default panel-body">
+                                <canvas id="tickets-chart" width="800" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="sales">
+                    <h3>Sales Report</h3>
+                    <div class="row padding-top-md">
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Sales
+                                </div>
+                                <div class="panel-body">
+                                    <canvas id="sales-chart" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Issued Products
+                                </div>
+                                <div class="panel-body">
+                                    <canvas id="issued-products" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Sales Types
+                                </div>
+                                <div class="panel-body">
+                                    <canvas id="sales-type" width="400" height="400"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="transactions">
+                    <h3>Transactions</h3>
+                    <div class="row padding-top-md">
+                        <div class="panel panel-default panel-body">
+                            <canvas id="transactions-line-chart" width="800" height="500"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="payg">
+                    <h3 class="padding-bottom-md"><span class="label label-default">12</span> Pay As You Go Customers</h3>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    PAYG Summary
+                                </div>
+                                <div class="panel-body">
+                                    <canvas id="payg-summary-chart" width="600" height="500"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Delinquent
+                                </div>
+                                <div class="panel-body">
+                                    <canvas id="delinquent-chart" width="480"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="unknown">
+                    <h3 class="padding-bottom-md">Unknown Payments</h3>
+                    <table class="table table-responsive table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Date Added</th>
+                            <th>Transaction Number</th>
+                            <th>Phone Number</th>
+                            <th>Account Number</th>
+                            <th>Name</th>
+                            <th>Paid In</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <nav aria-label="" class="text-center full-width">
+    <ul class="pagination">
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+        <li class="disabled"><a href="#">...</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>
+                </div>
+            </div>
+        </div>
     </section>
+
+<script>
+    var options = {
+        responsive: false,
+        maintainAspectRatio: false
+    }
+    var ctxSales = document.getElementById("sales-chart");
+    var dataSales = {
+        labels: [
+            "Closed",
+            "Open"
+        ],
+        datasets: [
+            {
+                data: [300, 50],
+                backgroundColor: [
+                    "#FF6384",
+                    "#36A2EB"
+                ],
+                hoverBackgroundColor: [
+                    "#FF6384",
+                    "#36A2EB"
+                ]
+            }]
+    };
+    var salesChart = new Chart(ctxSales, {
+        type: 'doughnut',
+        data: dataSales
+    });
+
+    var ctxIssued = document.getElementById("issued-products");
+    var dataIssued = {
+        labels: [
+            "With Serial",
+            "Without Serial"
+        ],
+        datasets: [
+            {
+                data: [300, 50],
+                backgroundColor: [
+                    "#0fcf00",
+                    "#36A2EB"
+                ],
+                hoverBackgroundColor: [
+                    "#0fcf00",
+                    "#36A2EB"
+                ]
+            }]
+    };
+    var issuedChart = new Chart(ctxIssued, {
+        type: 'doughnut',
+        data: dataIssued
+    });
+
+    var ctxTypes = document.getElementById("sales-type");
+    var dataTypes = {
+        labels: [
+            "PAYG",
+            "Cash",
+            "Installments"
+        ],
+        datasets: [
+            {
+                data: [300, 50, 80],
+                backgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#1DA900"
+                ],
+                hoverBackgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#1DA900"
+                ]
+            }]
+    };
+    var typesChart = new Chart(ctxTypes, {
+        type: 'doughnut',
+        data: dataTypes
+    });
+
+    var ctxTransactionsLine = document.getElementById("transactions-line-chart");
+    var dataTransactionsLine = {
+        labels: ["1", "2", "3", "4", "5", "6", "7"],
+        datasets: [
+            {
+                label: "Transactions",
+                fill: false,
+                lineTension: 0.1,
+                backgroundColor: "rgba(75,192,192,0.4)",
+                borderColor: "rgba(75,192,192,1)",
+                borderCapStyle: 'butt',
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: 'miter',
+                pointBorderColor: "rgba(75,192,192,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 1,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                data: [65, 59, 80, 81, 56, 55, 40],
+                spanGaps: false,
+            }
+        ]
+    };
+    var transactionsLine = Chart.Line(ctxTransactionsLine, {
+        data: dataTransactionsLine,
+        options: options
+    });
+
+    var ctxPAYG = document.getElementById("payg-summary-chart");
+    var dataPAYG = {
+        labels: [
+            "PAYG",
+            "Cash",
+            "Installments"
+        ],
+        datasets: [
+            {
+                data: [300, 50, 80],
+                backgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#1DA900"
+                ],
+                hoverBackgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#1DA900"
+                ]
+            }]
+    };
+    var typesChart = new Chart(ctxPAYG, {
+        type: 'doughnut',
+        data: dataPAYG
+    });
+
+    var ctxDelinquent = document.getElementById("delinquent-chart");
+    var dataDelinquent = {
+        labels: ["3 Days", "4-10 Days", "11-14 Days", "15-21 Days", ">21 Days"],
+        datasets: [
+            {
+                label: "Delinquent",
+                fill: false,
+                lineTension: 0.1,
+                backgroundColor: "rgba(75,192,192,0.4)",
+                borderColor: "rgba(75,192,192,1)",
+                borderCapStyle: 'butt',
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: 'miter',
+                pointBorderColor: "rgba(75,192,192,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 1,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                data: [65, 59, 80, 81, 56],
+                spanGaps: false,
+            }
+        ]
+    };
+    var delinquentLine = Chart.Bar(ctxDelinquent, {
+        data: dataDelinquent,
+        options: options
+    });
+
+
+    var ctxOC = document.getElementById("open-closed-chart");
+    var dataIssued = {
+        labels: [
+            "Open",
+            "Closed"
+        ],
+        datasets: [
+            {
+                data: [300, 50],
+                backgroundColor: [
+                    "#0fcf00",
+                    "#36A2EB"
+                ],
+                hoverBackgroundColor: [
+                    "#0fcf00",
+                    "#36A2EB"
+                ]
+            }]
+    };
+    var ocChart = new Chart(ctxOC, {
+        type: 'doughnut',
+        data: dataIssued
+    });
+
+    var ctxTickets = document.getElementById("tickets-chart");
+    var dataTickets = {
+        labels: ["1", "2", 3, 4, 5, 6, 7, 8, 9, 10],
+        datasets: [
+            {
+                label: "Tickets",
+                fill: false,
+                lineTension: 0.1,
+                backgroundColor: "rgba(75,192,192,0.4)",
+                borderColor: "rgba(75,192,192,1)",
+                borderCapStyle: 'butt',
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: 'miter',
+                pointBorderColor: "rgba(75,192,192,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 1,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                data: [4, 10],
+                spanGaps: false,
+            }
+        ]
+    };
+    var ticketsLine = Chart.Line(ctxTickets, {
+        data: dataTickets,
+        options: options
+    });
+
+</script>
 </div>
 </div>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/Chart.min.js"></script>
 </body>
 </html>

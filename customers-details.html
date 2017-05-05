@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/app.0.1.min.css" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/Chart.min.js"></script>
 </head>
 
 <body>
@@ -64,7 +68,7 @@
                 <li><small>Customer since 12 April 2016</small></li>
             </ul>
             <div class="padding-top-lg">
-                <button class="btn bg-primary" data-toggle="modal" data-target="#tickets-new">+ New Ticket</button>
+                <button class="btn bg-primary" data-toggle="modal" data-target="#tickets-new">+ New Ticket</button> <button class="btn btn-primary" data-toggle="modal" data-target="#calls-new">+ New Call & Disposition</button>
             </div>
         </div>
         <div class="col-sm-8">
@@ -74,6 +78,7 @@
                 <li role="presentation"><a href="#transactions" aria-controls="transactions" role="tab" data-toggle="tab">Transactions</a></li>
                 <li role="presentation"><a href="#tickets" aria-controls="tickets" role="tab" data-toggle="tab">Tickets</a></li>
                 <li role="presentation"><a href="#sms" aria-controls="sms" role="tab" data-toggle="tab">SMS</a></li>
+                <li role="presentation"><a href="#calls" aria-controls="calls" role="tab" data-toggle="tab">Calls & Dsipositions</a></li>
                 <li role="presentation"><a href="#statement" aria-controls="statement" role="tab" data-toggle="tab">Statement</a></li>
             </ul>
 
@@ -181,7 +186,92 @@
                         </table>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="statement">Statement</div>
+                <div role="tabpanel" class="tab-pane" id="calls">
+                    <div class="padding-md bg-white">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h4>Previous Calls </h4>
+                            </div>
+                            <div class="col-sm-8 text-right">
+                                <button class="pull-right btn btn-success btn-sm" data-toggle="modal" data-target="#calls-new">New Call</button>
+                            </div>
+                        </div>
+                        <table class="table table-responsive table-bordered margin-top-md">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Caller</th>
+                                <th>Disposition</th>
+                                <th>Comments</th>
+                            </tr>
+                            </thead>
+                        </table>
+
+                        <hr />
+
+                        <h4>Dispositions</h4>
+                        <table class="table table-responsive table-bordered margin-top-md">
+                            <thead>
+                            <tr>
+                                <th>Question</th>
+                                <th>Answer</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>How is your experience of using the jiko</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>On a scale of 1-10 (ten being the highest) how likely are you to recommend Envirofit to your friends and family?</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>How did you hear about us?</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>what were you using before?</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Did you fill the warranty and form?</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Did you receive the referral scheme flier?</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>On a Scale of 1-10, (ten being the highest), how would you rate the sales agent who served you? (Customer gives a rating)</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>On a scale of 1-10 (ten being the highest) how would you rate the delivery? Why?</td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="statement">
+                    <div class="padding-md bg-white">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Date Sent</th>
+                                <th>Message</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>23 March 2016</td>
+                                <td>Well Received. Thanks</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -236,6 +326,165 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn bg-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="calls-new">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header btn-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">New Call & Disposition</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h4 class="padding-top-md">New Call</h4>
+                        <hr />
+                        <div class="form-group">
+                            <label>Customer Reached</label><br />
+                            <input type="radio" name="reach" /> Yes
+                            <input type="radio" name="reach" /> No
+                        </div>
+                        <div class="form-group">
+                            <label>Call Disposition</label>
+                            <select class="form-control">
+                                <option>Welcome Call</option>
+                                <option>Referral Calls</option>
+                                <option>Net Promoter Score</option>
+                                <option>Installments</option>
+                                <option>Woodstove Promo</option>
+                                <option>Equity Customers</option>
+                                <option>Pay As You Go</option>
+                                <option>Customer Complaints</option>
+                                <option>Blank Call</option>
+                                <option>Product Queries</option>
+                            </select>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-xs-10">
+                                <label>On a scale of 1-10 (ten being the highest) how would you rate the overall experience from 1st contact until now? Why?</label>
+                            </div>
+                            <div class="col-xs-2">
+                                <select class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Any other comment?</label>
+                            <textarea rows="3" class="form-control"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary">Save Call</button>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="well">
+
+                            <h4 class="">New Disposition</h4>
+                            <hr />
+                            <div class="form-group">
+                                <label>How is your experience using the jiko?</label>
+                                <textarea rows="3" class="form-control"></textarea>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-xs-10">
+                                    <label>On a scale of 1-10 (ten being the highest) how likely are you to recommend Envirofit to your friends and family?</label>
+                                </div>
+                                <div class="col-xs-2">
+                                    <select class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>How did you hear about us?</label>
+                                <select class="form-control">
+                                    <option>Agent</option>
+                                    <option>Facebook</option>
+                                    <option>Radio</option>
+                                    <option>Referral</option>
+                                    <option>TV</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>What wwere you using before?</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label>Did you fill the warranty and form?</label><br />
+                                <input class="" type="radio" name="warranty['yes']" /> Yes
+                                <input class="" type="radio" name="warranty['no']" /> No
+                            </div>
+                            <div class="form-group">
+                                <label>Did you receive the referral scheme flier?</label><br />
+                                <input class="" type="radio" name="referral['yes']" /> Yes
+                                <input type="radio" name="referral['no']" /> No
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-xs-10">
+                                    <label>On a Scale of 1-10, (ten being the highest), how would you rate the sales agent who served you? (Customer gives a rating)</label>
+                                </div>
+                                <div class="col-xs-2">
+                                    <select class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-xs-10">
+                                    <label>On a scale of 1-10 (ten being the highest) how would you rate the delivery? Why?</label>
+                                </div>
+                                <div class="col-xs-2">
+                                    <select class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12">
+                                    <textarea rows="3" class="form-control" placeholder="Why would the customer rate the delivery as above?"></textarea>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary">Save Disposition</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -335,8 +584,5 @@
 </div>
 </div>
 </div>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/Chart.min.js"></script>
 </body>
 </html>
