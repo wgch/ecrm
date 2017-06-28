@@ -69,56 +69,35 @@
                 <div role="tabpanel" class="tab-pane active" id="tab-001">
                     <h4 class="padding-bottom-md"><strong>Envirofit Supersaver Charcoal Jiko</strong></h4>
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" ><a href="#pricing" role="tab" data-toggle="tab">Pricing</a></li>
-                        <li role="presentation" class="active"><a href="#dispatch" role="tab" data-toggle="tab">Dispatch</a></li>
+                        <li role="presentation" class="active"><a href="#pricing" role="tab" data-toggle="tab">Pricing</a></li>
+                        <li role="presentation" class=""><a href="#discounts" role="tab" data-toggle="tab">Discounts</a></li>
+                        <li role="presentation" class=""><a href="#dispatch" role="tab" data-toggle="tab">Dispatch</a></li>
                     </ul>
 
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane" id="pricing">
+                        <div role="tabpanel" class="tab-pane active" id="pricing">
                             <div class="top-actions">
-                                <div class="form-group">
-                                    <label for="" class="">New Pricing</label>
-                                </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <select class="form-control">
-                                                <option>Sales Type</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-4">
-                                                    <input class="form-control" placeholder="Base Price"/>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <input class="form-control" placeholder="Min Price"/>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <input class="form-control" placeholder="Max Price"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <input class="form-control" placeholder="Expiry"/>
-                                        </div>
-                                        <div class="col-sm-12 padding-top-md">
-                                            <button class="btn bg-primary pull-right">Add Pricing</button>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h4><strong>Pricing</strong></h4>
+                                        <span>3 active &bull; Dependent on <strong>Envirofit Supersaver Charcoal Jiko</strong></span>
+                                    </div>
+                                    <div class="col-sm-6 text-right">
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#product-new">Edit Product</button>
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#add-pricing">Add Pricing</button>
                                     </div>
                                 </div>
-
                             </div>
                             <table class="table table-bordered">
                                 <thead>
                                 <tr>
                                     <th class="text-center">#</th>
                                     <th>Sales Type</th>
-                                    <th class="text-right">Base Price</th>
-                                    <th class="text-right">Min. Price</th>
-                                    <th class="text-right">Max. Price</th>
+                                    <th class="text-right">Base</th>
+                                    <th class="text-right">Min.</th>
+                                    <th class="text-right">Max.</th>
                                     <th>Date Added</th>
-                                    <th>Expiry Date</th>
+                                    <th class="text-center">Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -129,13 +108,68 @@
                                     <td class="text-right">35</td>
                                     <td class="text-right">200</td>
                                     <td>Today</td>
-                                    <td>20 January 2019</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-default btn-xs">Disable</button>
+                                        <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#add-pricing">Edit</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="discounts">
+                            <div class="top-actions">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h4><strong>Discounts</strong></h4>
+                                        <span>4 active</span>
+                                    </div>
+                                    <div class="col-sm-6 text-right">
+                                        <button class="btn bg-primary" data-toggle="modal" data-target="#add-discount">Add Discount</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="text-center"></th>
+                                    <th>Sales Type</th>
+                                    <th>Type</th>
+                                    <th class="col-sm-3">Applies</th>
+                                    <th>Disc. Amount</th>
+                                    <th>Period</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center"><i class="fa fa-close text-danger"></i></td>
+                                    <td>Cash</td>
+                                    <td>Agent</td>
+                                    <td><strong>Agents</strong>: Nick Otieno, Fred Anam</td>
+                                    <td>400</td>
+                                    <td>4 Jan 17 - 10 Oct 17</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-info btn-xs">Enable</button>
+                                        <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#add-discount">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="fa fa-circle text-success"></i></td>
+                                    <td>Cash</td>
+                                    <td>Quantity</td>
+                                    <td>Apply if <strong>Base Amount</strong> is <strong>less than or equal to</strong> <strong>KES. 560</strong></td>
+                                    <td>400</td>
+                                    <td>4 Jan 17 - 10 Oct 17</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-danger btn-xs">Disable</button>
+                                        <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#add-discount">Edit</button>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
 
-                        <div role="tabpanel" class="tab-pane active" id="dispatch">
+                        <div role="tabpanel" class="tab-pane" id="dispatch">
                             <div class="top-actions">
                                 <div class="form-inline">
                                     <label for="" class="padding-right-md">New Product Dispatch</label>
@@ -196,7 +230,9 @@
             </div>
         </div>
     </section>
-
+</div>
+</div>
+<!-- Add Product -->
 <div class="modal fade" tabindex="-1" role="dialog" id="product-new">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -213,14 +249,25 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm-6">
-                                <label>Price</label>
-                                <input class="form-control" placeholder="Enter Base Price" />
+                                <div class="margin-bottom-md">
+                                    <label>Price</label>
+                                    <input class="form-control" placeholder="Enter Base Price" />
+                                </div>
+                                <div class="margin-bottom-md">
+                                    <label>Product dependent on</label>
+                                    <select class="form-control">
+                                        <option>None</option>
+                                        <option>Envirofit Smartsaver Jiko</option>
+                                        <option>Envirofit Supersaver Charcoal Jiko</option>
+                                        <option>Envirofit Supersaver Wood Jiko</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-sm-6">
                                 <label>Image</label>
-                                <input class="form-control" placeholder="Enter ID" />
+                                <input class="form-control" type="hidden" placeholder="Enter ID" />
                                 <div class="bg-grey-light">
-                                    <img src="" class="full-width border-radius" />
+                                    <img src="" class="full-width border-radius height-md" />
                                 </div>
                             </div>
                         </div>
@@ -235,6 +282,133 @@
     </div>
 </div>
 
+<!-- Add Pricing -->
+<div class="modal fade" tabindex="-1" role="dialog" id="add-pricing">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Pricing</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label>Select Sales Type</label>
+                        <select class="form-control">
+                            <option>Pay as you go</option>
+                            <option>Cash</option>
+                            <option>Installments</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Base Price</label>
+                        <input class="form-control" placeholder="Enter Base Price"/>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>Min Price</label>
+                                <input class="form-control" placeholder="Min Price"/>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Max Price</label>
+                                <input class="form-control" placeholder="Max Price"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-primary">Save Pricing</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Discount -->
+<div class="modal fade" tabindex="-1" role="dialog" id="add-discount">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Discount</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label>Select Sale Type</label>
+                        <select class="form-control">
+                            <option>Pay as you go</option>
+                            <option>Cash</option>
+                            <option>Installment</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Type of Discount</label>
+                        <select class="form-control">
+                            <option>Agent Discount</option>
+                            <option>Quantity Discount</option>
+                            <option>Normal Discount</option>
+                        </select>
+                    </div>
+                    <div class="well">
+                        <label>Select Agents</label>
+                        <select class="form-control" multiple="multiple">
+                            <option>James</option>
+                            <option>Nick</option>
+                            <option>Samuel</option>
+                        </select>
+                    </div>
+                    <div class="well">
+                        <label>Apply discount if</label>
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <select class="form-control">
+                                    <option>Total Product Amount</option>
+                                    <option>Base Amount</option>
+                                    <option>Discount Amount</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-2 padding-top-sm text-center">is</div>
+                            <div class="col-xs-5">
+                                <select class="form-control">
+                                    <option>Less than or equal to</option>
+                                    <option>More than or equal to</option>
+                                    <option>Equal to</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="margin-top-md">
+                            <input class="form-control" placeholder="Amount" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Discount Amount</label>
+                        <input class="form-control" placeholder="Enter Amount" />
+                    </div>
+                    <div class="form-group">
+                        <label>Select Discount Period</label>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <button class="btn btn-default btn-block">Start Date</button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button class="btn btn-default btn-block">End Date</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-primary">Save Discount</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Assign Serial -->
 <div class="modal fade" tabindex="-1" role="dialog" id="assign">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -261,8 +435,6 @@
             </div>
         </div>
     </div>
-</div>
-</div>
 </div>
 </body>
 </html>

@@ -113,11 +113,11 @@ a, a:hover, a:focus {
   padding: 60px;
 }
 
-.padding-lg, .top-actions {
+.padding-lg {
   padding: 30px;
 }
 
-.padding-md {
+.padding-md, .top-actions {
   padding: 15px;
 }
 
@@ -169,11 +169,11 @@ a, a:hover, a:focus {
   padding: 60px;
 }
 
-.padding-lg, .top-actions {
+.padding-lg {
   padding: 30px;
 }
 
-.padding-md {
+.padding-md, .top-actions {
   padding: 15px;
 }
 
@@ -225,11 +225,11 @@ a, a:hover, a:focus {
   padding: 60px;
 }
 
-.padding-lg, .top-actions {
+.padding-lg {
   padding: 30px;
 }
 
-.padding-md {
+.padding-md, .top-actions {
   padding: 15px;
 }
 
@@ -281,11 +281,11 @@ a, a:hover, a:focus {
   padding: 60px;
 }
 
-.padding-lg, .top-actions {
+.padding-lg {
   padding: 30px;
 }
 
-.padding-md {
+.padding-md, .top-actions {
   padding: 15px;
 }
 
