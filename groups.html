@@ -15,8 +15,8 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-
-<section class="header">
+    
+    <section class="header">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -26,10 +26,10 @@
                 <ul class="navigation list-inline">
                     <li class=""><a href="tickets.html" class="">Tickets</a></li>
                     <li class=""><a href="sales.html" class="">Sales</a></li>
-                    <li class=""><a href="customers.html" class="">Customers</a></li>
+                    <li class=" active "><a href="customers.html" class="">Customers</a></li>
                     <li class=""><a href="transactions.html" class="">Transactions</a></li>
                     <li class=""><a href="products.html" class="">Products</a></li>
-                    <li class=" active "><a href="sms.html" class="">SMS</a></li>
+                    <li class=""><a href="sms.html" class="">SMS</a></li>
                     <li class=""><a href="reports.html" class="">Reports</a></li>
                     <li class=""><a href="agents.html" class="">Agents</a></li>
                     <li class="">
@@ -47,49 +47,66 @@
     </div>
 </section>
 
-<section class="top-nav container">
-    <div class="row">
-        <div class="col-sm-3">
-            <h3>SMS</h3>
-        </div>
-        <div class="col-sm-9">
-            <div class="filter text-right full-width">
+    <section class="top-nav container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle btn-lg strong" type="button" id="customers-prospect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Groups
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="customers-prospect">
+                        <li><a href="customers.html">Customers</a></li>
+                        <li><a href="groups.html">Groups</a></li>
+                        <li><a href="prospects.html">Prospects</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="filter text-right full-width">
     <ul class="list-inline">
         
-        
+        <li><button class="btn btn-default btn-sm"><strong>Payment Type</strong> <span class="caret"></span></button></li>
         <li><button class="btn btn-default btn-sm">List 10 <span class="caret"></span></button></li></li>
         <li><input class="form-control input-sm" type="text" placeholder="Search" /></li>
         <li><button class="btn btn-default btn-sm"><i class="fa fa-calendar"></i> <strong>January 1, 2017</strong> - <strong>April 1, 2017</strong> <span class="caret"></span> </button></li>
         <li><button class="btn btn-info btn-sm"><strong>Export</strong></button></li>
         
-        
+        <li><button class="btn bg-primary btn-sm" data-toggle="modal" data-target="#customer-new"><strong>+ New Prospect</strong></button></li>
         
         
     </ul>
 </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="content container">
+    <section class="content container">
     <div class="row">
         <div class="col-sm-12">
             <table class="table table-bordered">
                 <thead>
                 <tr>
                     <th class="text-center">#</th>
-                    <th>Date</th>
-                    <th>Phone Number</th>
-                    <th>SMS</th>
-                    <th class="text-right">Actions</th>
+                    <th>Group Name</th>
+                    <th>Group ID</th>
+                    <th>Members</th>
+                    <th>Location</th>
+                    <th>Date Created</th>
+                    <th class="text-right">Discount</th>
+                    <th class="text-right">Amount</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td class="text-center">1</td>
-                    <td>23 January 2017</td>
-                    <td>+254721345678</td>
-                    <td></td>
+                    <td><a href="#group-details" data-toggle="modal"><strong>Jeremiah Group</strong></a></td>
+                    <td>A1289K</td>
+                    <td>5</td>
+                    <td>Nairobi South</td>
+                    <td>23 April 2017</td>
+                    <td class="text-right">1,000</td>
+                    <td class="text-right">19,450</td>
                 </tr>
                 </tbody>
             </table>
@@ -107,6 +124,45 @@
         </div>
     </div>
 </section>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="customer-new">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Prospect</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input class="form-control" placeholder="Enter title" />
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>ID Number</label>
+                                <input class="form-control" placeholder="Enter ID" />
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Phone Number</label>
+                                <input class="form-control" placeholder="Enter Phone Number" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input class="form-control" placeholder="Enter Location" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 </div>
 <!-- Add Product -->
