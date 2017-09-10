@@ -15,8 +15,8 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-    
-    <section class="header">
+
+<section class="header">
     <div class="container">
         <div class="row">
             <div class="col-sm-2">
@@ -24,13 +24,13 @@
             </div>
             <div class="col-sm-10">
                 <ul class="navigation list-inline">
-                    <li class=" active "><a href="tickets.html" class="">Tickets</a></li>
+                    <li class=""><a href="tickets.html" class="">Tickets</a></li>
                     <li class=""><a href="sales.html" class="">Sales</a></li>
                     <li class=""><a href="customers.html" class="">Customers</a></li>
                     <li class=""><a href="transactions.html" class="">Transactions</a></li>
                     <li class=""><a href="products.html" class="">Products</a></li>
                     <li class=""><a href="warranties.html" class="">Warranties</a></li>
-                    <li class=""><a href="promotions.html" class="">Promotions</a></li>
+                    <li class=" active "><a href="promotions.html" class="">Promotions</a></li>
                     <li class=""><a href="reports.html" class="">Reports</a></li>
                     <li class="">
                         <a href="#" class="" data-toggle="dropdown">Admin <span class="caret"></span></a>
@@ -50,68 +50,163 @@
     </div>
 </section>
 
-    <section class="top-nav container">
-        <div class="row">
-            <div class="col-sm-3">
-                <h3><a href="#">All Tickets <span class="caret"></span></a></h3>
-            </div>
-            <div class="col-sm-9">
-                <div class="filter text-right full-width">
+<section class="top-nav container">
+    <div class="row">
+        <div class="col-sm-3">
+            <h3><strong>Promotions</strong></h3>
+        </div>
+        <div class="col-sm-9">
+            <div class="filter text-right full-width">
     <ul class="list-inline">
-        <li><button class="btn btn-danger btn-sm"><strong>Unresolved Tickets</strong> <span class="caret"></span></button></li>
+        
         
         <li><button class="btn btn-default btn-sm">List 10 <span class="caret"></span></button></li></li>
         <li><input class="form-control input-sm" type="text" placeholder="Search" /></li>
         <li><button class="btn btn-default btn-sm"><i class="fa fa-calendar"></i> <strong>January 1, 2017</strong> - <strong>April 1, 2017</strong> <span class="caret"></span> </button></li>
-        
-        <li><button class="btn bg-primary btn-sm" data-toggle="modal" data-target="#tickets-new"><strong>+ New</strong></button></li>
-        
+        <li><button class="btn btn-info btn-sm"><strong>Export</strong></button></li>
         
         
         
+        
+        <li><button class="btn bg-primary btn-sm" data-toggle="collapse" data-target="#add-promotion"><strong>+ New Promotion</strong></button></li>
     </ul>
 </div>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="content container">
+<section class="content container">
+    <div class="well collapse" id="add-promotion">
         <div class="row">
             <div class="col-sm-12">
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th class="text-center">#</th>
-                        <th>Priority</th>
-                        <th>Title</th>
-                        <th>Category</th>
-                        <th>Customer</th>
-                        <th>Assigned to</th>
-                        <th>Ticket Status</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td><span class="label label-danger">High</span></td>
-                        <td><a href="#tickets-view-update" data-toggle="modal"><strong>Payment not updated</strong></a></td>
-                        <td>Payment</td>
-                        <td><a href="customers-details.html"><strong>Mary Wambui</strong></a></td>
-                        <td><a href="user-details.html">Angela Manoti</a></td>
-                        <td><span class="text-danger">Unresolved</span></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">2</td>
-                        <td><span class="label label-warning">Medium</span></td>
-                        <td><a href="#tickets-view-update" data-toggle="modal"><strong>Call Back</strong></a></td>
-                        <td>Other</td>
-                        <td><a href="customers-details.html"><strong>Mary Wambui</strong></a></td>
-                        <td><a href="user-details.html">Angela Manoti</a></td>
-                        <td><span class="text-danger">Unresolved</span></td>
-                    </tr>
-                    </tbody>
-                </table>
-                <nav aria-label="" class="text-center full-width">
+                <h3>Add Promotion</h3>
+            </div>
+            <div class="col-sm-6">
+                <label>Name of Promotion</label>
+                <input class="form-control" placeholder="Enter name of promotion"/>
+            </div>
+            <div class="col-sm-6">
+                <label>Set Promotion Period</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input class="form-control" placeholder="Start date"/>
+                    </div>
+                    <div class="col-sm-6">
+                        <input class="form-control" placeholder="End date"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row margin-top-md padding-top-md border-top">
+            <div class="col-sm-12 padding-bottom-md">
+                <h4><strong>Filter customers</strong></h4>
+            </div>
+            <div class="col-sm-4 border-right">
+                <label>Type of Sales</label>
+                <select class="form-control margin-bottom-md">
+                    <option>Agent Sales</option>
+                    <option>Partner Sales</option>
+                    <option>Group Sales</option>
+                    <option>Prospects</option>
+                </select>
+                <label>Created between</label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <input class="form-control" placeholder="Start date" />
+                    </div>
+                    <div class="col-sm-6">
+                        <input class="form-control" placeholder="End date" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 border-right">
+                <label>Payment Type</label>
+                <select class="form-control margin-bottom-md">
+                    <option>Cash</option>
+                    <option>Pay as you go</option>
+                    <option>Installment</option>
+                </select>
+                <label>Customers</label>
+                <select class="form-control">
+                    <option>All customers with this payment type</option>
+                    <option>Delinquent Customers</option>
+                    <option>Defaulted Sales</option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <label>Choose Product</label>
+                <select class="form-control margin-bottom-md">
+                    <option>All Products</option>
+                    <option>Envirofit SuperSaver Wood Jiko</option>
+                    <option>Envirofit Smartsave Charlcoal Jiko</option>
+                </select>
+                <label>Product Type</label>
+                <select class="form-control">
+                    <option selected>Products with Warranties</option>
+                    <option>Activated warranties</option>
+                </select>
+            </div>
+        </div>
+        <div class="row margin-top-md padding-top-md border-top">
+            <div class="col-sm-12 padding-bottom-md">
+                <h4><strong>Reward</strong></h4>
+            </div>
+            <div class="col-sm-4">
+                <label>Select Reward</label>
+                <select class="form-control margin-bottom-md">
+                    <option>Discount</option>
+                    <option>Airtime</option>
+                    <option>Rebate</option>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <label>Reward Value</label>
+                <input class="form-control" placeholder="Enter reward value">
+            </div>
+            <div class="col-sm-4">
+                <label>Expiry of the reward</label>
+                <input class="form-control" placeholder="Enter reward value">
+            </div>
+        </div>
+        <div class="row margin-top-md padding-top-md border-top">
+            <div class="col-sm-6">
+                <h4><strong>123</strong> customers filtered</h4>
+            </div>
+            <div class="col-sm-6 text-right">
+                <button class="btn btn-default" data-toggle="collapse" data-target="#add-promotion">Cancel</button>
+                <button class="btn btn-success" data-toggle="collapse" data-target="#add-promotion">Save Promotion</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th class="text-center">#</th>
+                    <th>Promotion Name</th>
+                    <th>Date Created</th>
+                    <th>Promotion Period</th>
+                    <th>Customers</th>
+                    <th>Status</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td><a href="promotion-details.html" class=""><strong>Early Repayment Discount</strong></a></td>
+                    <td>12 September 2017</td>
+                    <td>12 Sept 17 to 30 Spet 17</td>
+                    <td>123</td>
+                    <td><span class="text-success">Active</span></td>
+                    <td class="text-center">
+                        <button class="btn btn-xs">Deactivate</button>
+                        <button class="btn btn-primary btn-xs" data-target="#send-message" data-toggle="modal">Send Message</button></td>
+                </tr>
+                </tbody>
+            </table>
+            <nav aria-label="" class="text-center full-width">
     <ul class="pagination">
         <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
         <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
@@ -122,154 +217,33 @@
         <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
     </ul>
 </nav>
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-<div class="modal fade" tabindex="-1" role="dialog" id="tickets-new">
+<div class="modal fade" tabindex="-1" role="dialog" id="send-message">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Add Ticket</h4>
+                <h4 class="modal-title">Send Message</h4>
             </div>
             <div class="modal-body">
-                <div class="form">
-                    <div class="form-group">
-                        <label>Title</label>
-                        <input class="form-control" placeholder="Enter title" />
-                    </div>
-                    <div class="form-group">
-                        <label>Description</label>
-                        <textarea class="form-control" rows="4"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Customer</label>
-                        <select class="form-control">
-                            <option>Select Customer</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Assignee</label>
-                        <select class="form-control">
-                            <option>Select Asignee</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label>Kind</label>
-                                <select class="form-control">
-                                    <option>Select Kind</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-6">
-                                <label>Priority</label>
-                                <select class="form-control">
-                                    <option>Select Priority</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                <div class="well">
+                    <label>Custom Addons</label>
+                    <ul class="list-unstyled">
+                        <li><strong>[first_name]</strong> - customer's first name</li>
+                        <li><strong>[last_name]</strong> - customer's last name</li>
+                        <li><strong>[balance]</strong> - Payment balance</li>
+                        <li><strong>[date_due]</strong> - date due</li>
+                    </ul>
                 </div>
+                <label>Message</label>
+                <textarea rows="5" class="form-control"></textarea>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn bg-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" tabindex="-1" role="dialog" id="tickets-view-update">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-primary">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Ticket #3847398374</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-6 border-right border-light">
-                        <div class="">
-                            <div class="form-group">
-                                <h3>Discontinued payment</h3>
-                            </div>
-                            <div class="form-group">
-                                <label>Description</label>
-                                <p>szldhfd dfhf idufgh uidfg uhdfg </p>
-                            </div>
-                            <hr />
-                            <div class="form-group">
-                                <label>Customer</label>
-                                <h4><a href="customers-details.html">Mary Wambui</a></h4>
-                                <h5>0712 345678</h5>
-                            </div>
-                            <hr />
-                            <div class="form-group">
-                                <label>Assignee</label>
-                                <strong>Natalie M</strong>
-                            </div>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <label>Kind</label>
-                                        <p>Payments</p>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <label>Priority</label>
-                                        <span class="label label-warning">Medium</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <h3 class="padding-bottom-md"><strong>Updates</strong></h3>
-                        <table class="table table-condensed table-curved">
-                            <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Update</th>
-                                <th>Callback</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>23 Mar 2017</td>
-                                <td>Customer was unhappy with the results</td>
-                                <td>-</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <hr />
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <label>Post update</label>
-                            <textarea class="form-control" placeholder="Update"></textarea>
-                        </div>
-                        <div class="col-sm-6">
-                            <label>Callback</label>
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <input class="form-control" type="date" placeholder="Date" />
-                                </div>
-                                <div class="col-sm-6">
-                                    <input class="form-control" type="time" placeholder="Time" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary pull-left" data-dismiss="modal">Close Ticket</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn bg-primary">Save Update</button>
+                <button type="button" class="btn bg-primary">Send Message</button>
             </div>
         </div>
     </div>
