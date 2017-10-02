@@ -32,12 +32,12 @@
             <div class="col-sm-10">
                 <ul class="navigation list-inline">
                     <li class=""><a href="tickets.html" class="">Tickets</a></li>
-                    <li class=" active "><a href="sales.html" class="">Sales</a></li>
+                    <li class=""><a href="sales.html" class="">Sales</a></li>
                     <li class=""><a href="customers.html" class="">Customers</a></li>
                     <li class=""><a href="transactions.html" class="">Transactions</a></li>
                     <li class=""><a href="products.html" class="">Products</a></li>
                     <li class=""><a href="promotions.html" class="">Promotions</a></li>
-                    <li class=" dropdown">
+                    <li class=" active  dropdown">
                         <a href="#" data-toggle="dropdown">Reports <span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li><a href="reports.html">Overall</a></li>
@@ -62,19 +62,10 @@
     </div>
 </section>
 
-    <section class="top-nav container-fluid">
+    <section class="top-nav container">
         <div class="row">
             <div class="col-sm-3">
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle btn-lg strong" type="button" id="customers-prospect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Groups
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="customers-prospect">
-                        <li><a href="sales.html">Sales</a></li>
-                        <li><a href="groups.html">Group Sales</a></li>
-                    </ul>
-                </div>
+                <h3>Paygo Reports</h3>
             </div>
             <div class="col-sm-9">
                 <div class="filter text-right full-width">
@@ -87,101 +78,422 @@
         <li><button class="btn btn-info btn-sm"><strong>Export</strong></button></li>
         
         
-        <li><button class="btn bg-primary btn-sm" data-toggle="modal" data-target="#sales-new"><strong>+ New Sale</strong></button></li>
+        
         
         
     </ul>
 </div>
+            </div>
+        </div>
+
+        <div class="row padding-top-md">
+            <div class="col-sm-6">
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                    <tr>
+                        <th colspan="5">Total # PAYG Customers (Current + Completed)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td rowspan="4" class="col-sm-4">Completed Customers<br />(Day 91+)</td>
+                        <td>Fully Paid Up</td>
+                        <td>32</td>
+                        <td>57%</td>
+                        <td>3%</td>
+                    </tr>
+                    <tr>
+                        <td>In Default</td>
+                        <td>24</td>
+                        <td>43%</td>
+                        <td>2%</td>
+                    </tr>
+                    <tr>
+                        <td>Reported to CRB</td>
+                        <td>0</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>56</strong></td>
+                        <td><strong>100%</strong></td>
+                        <td><strong>100%</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="bg-grey-lighter"></td>
+                    </tr>
+                    <tr>
+                        <td rowspan="5">Current Customers<br />(Day 1-90)</td>
+                        <td>Fully Paid Up</td>
+                        <td>38</td>
+                        <td>4%</td>
+                        <td>4%</td>
+                    </tr>
+                    <tr>
+                        <td>Ahead of plan</td>
+                        <td>78</td>
+                        <td>8%</td>
+                        <td>8%</td>
+                    </tr>
+                    <tr>
+                        <td>In line with plan</td>
+                        <td>15</td>
+                        <td>2%</td>
+                        <td>2%</td>
+                    </tr>
+                    <tr>
+                        <td>Delinquent (behind plan)</td>
+                        <td>795</td>
+                        <td>86%</td>
+                        <td>81%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>926</strong></td>
+                        <td><strong>100%</strong></td>
+                        <td><strong>100%</strong></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="bg-success"><strong>Total Paygo Customers</strong></td>
+                        <td class="bg-success"><strong>982</strong></td>
+                        <td class="bg-success"></td>
+                        <td class="bg-success"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading padding-none">
+                        <ul class="nav nav-tabs bg-grey-light">
+                            <li role="presentation" class="active"><a href="#tab-current" role="tab" data-toggle="tab">Current Customers</a></li>
+                            <li role="presentation"><a href="#tab-delinquent" role="tab" data-toggle="tab">Delinquent</a></li>
+                            <li role="presentation"><a href="#tab-defaulted" role="tab" data-toggle="tab">Defaulted</a></li>
+                        </ul>
+                    </div>
+                    <div class="panel-body padding-top-none">
+                        <div class="tab-content">
+                            <div class="tab-pane active" role="tabpanel" id="tab-current">
+                                <canvas id="payg-summary-chart" width="300" height="210"></canvas>
+                            </div>
+                            <div class="tab-pane" role="tabpanel" id="tab-delinquent">
+                                <canvas id="payg-delinquent" width="300" height="210"></canvas>
+                            </div>
+                            <div class="tab-pane" role="tabpanel" id="tab-defaulted">
+                                <canvas id="payg-defaulted" width="300" height="210"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                    <tr>
+                        <th rowspan="2" class="col-sm-2 bg-danger">Default</th>
+                        <th colspan="2">Number of Customers</th>
+                        <th rowspan="2">PAYG RRP</th>
+                        <th rowspan="2">Value of<br />Deposits Received</th>
+                        <th rowspan="2">Value of<br />Repayments<br />Received To Date</th>
+                        <th rowspan="2">Total Receipts To Date</th>
+                        <th rowspan="2">Balance Owing</th>
+                        <th rowspan="2">COGS Value</th>
+                        <th rowspan="2">COGS at Risk</th>
+                        <th rowspan="2">COGS at Risk<br />% RRP</th>
+                    </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>%</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>91-100</td>
+                        <td class="text-right">13</td>
+                        <td class="text-right">54%</td>
+                        <td class="text-right">60,450</td>
+                        <td class="text-right">19,500</td>
+                        <td class="text-right">19,830</td>
+                        <td class="text-right">39,330</td>
+                        <td class="text-right">21,120</td>
+                        <td class="text-right">34,372</td>
+                        <td class="text-right">-4,958</td>
+                        <td class="text-right">-8%</td>
+                    </tr>
+                    <tr>
+                        <td>101-110</td>
+                        <td class="text-right">2</td>
+                        <td class="text-right">8%</td>
+                        <td class="text-right">9,300</td>
+                        <td class="text-right">3,000</td>
+                        <td class="text-right">4,080</td>
+                        <td class="text-right">7,080</td>
+                        <td class="text-right">2,220</td>
+                        <td class="text-right">5,288</td>
+                        <td class="text-right">-1,792</td>
+                        <td class="text-right">-19%</td>
+                    </tr>
+                    <tr>
+                        <td>111-120</td>
+                        <td class="text-right">9</td>
+                        <td class="text-right">38%</td>
+                        <td class="text-right">41,850</td>
+                        <td class="text-right">13,500</td>
+                        <td class="text-right">17,100</td>
+                        <td class="text-right">30,600</td>
+                        <td class="text-right">11,250</td>
+                        <td class="text-right">23,796</td>
+                        <td class="text-right">-6,804</td>
+                        <td class="text-right">-16%</td>
+                    </tr>
+                    <tr>
+                        <td>120+</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">50%</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td class="text-right"><strong>24</strong></td>
+                        <td class="text-right"><strong>100%</strong></td>
+                        <td class="text-right"><strong>111,600</strong></td>
+                        <td class="text-right"><strong>36,000</strong></td>
+                        <td class="text-right"><strong>41,010</strong></td>
+                        <td class="text-right"><strong>77,010</strong></td>
+                        <td class="text-right"><strong>34,590</strong></td>
+                        <td class="text-right"><strong>63,456</strong></td>
+                        <td class="text-right"><strong>-13,554</strong></td>
+                        <td class="text-right"><strong>-12%</strong></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-responsive table-bordered">
+                    <thead>
+                    <tr>
+                        <th rowspan="2" class="col-sm-2 bg-warning">Delinquent</th>
+                        <th colspan="2">Number of Customers</th>
+                        <th rowspan="2">PAYG RRP</th>
+                        <th rowspan="2">Value of<br />Deposits Received</th>
+                        <th rowspan="2">Value of<br />Repayments<br />Received To Date</th>
+                        <th rowspan="2">Total Receipts To Date</th>
+                        <th rowspan="2">Balance Owing</th>
+                        <th colspan="2">Balance Overdue</th>
+                    </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>%</th>
+                        <th>Ksh</th>
+                        <th>%</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><= 5 days</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">-400,450</td>
+                        <td class="text-right">17%</td>
+                    </tr>
+                    <tr>
+                        <td>6 - 10 Days</td>
+                        <td class="text-right">90</td>
+                        <td class="text-right">11%</td>
+                        <td class="text-right">420,600</td>
+                        <td class="text-right">137,600</td>
+                        <td class="text-right">385</td>
+                        <td class="text-right">137,985</td>
+                        <td class="text-right">138,370</td>
+                        <td class="text-right">-185,850</td>
+                        <td class="text-right">8%</td>
+                    </tr>
+                    <tr>
+                        <td>11 - 15 Days</td>
+                        <td class="text-right">97</td>
+                        <td class="text-right">12%</td>
+                        <td class="text-right">451,050</td>
+                        <td class="text-right">145,500</td>
+                        <td class="text-right">0</td>
+                        <td class="text-right">145,500</td>
+                        <td class="text-right">145,500</td>
+                        <td class="text-right">-228,128</td>
+                        <td class="text-right">10%</td>
+                    </tr>
+                    <tr>
+                        <td>16 - 20 Days</td>
+                        <td class="text-right">54</td>
+                        <td class="text-right">7%</td>
+                        <td class="text-right">265,050</td>
+                        <td class="text-right">93,300</td>
+                        <td class="text-right">850</td>
+                        <td class="text-right">94,150</td>
+                        <td class="text-right">95,000</td>
+                        <td class="text-right">-393,465</td>
+                        <td class="text-right">16%</td>
+                    </tr>
+                    <tr>
+                        <td>21 - 30 Days</td>
+                        <td class="text-right">219</td>
+                        <td class="text-right">28%</td>
+                        <td class="text-right">1,023,000</td>
+                        <td class="text-right">349,445</td>
+                        <td class="text-right">650</td>
+                        <td class="text-right">350,095</td>
+                        <td class="text-right">350,745</td>
+                        <td class="text-right">-633,930</td>
+                        <td class="text-right">27%</td>
+                    </tr>
+                    <tr>
+                        <td>1 - 2 Months</td>
+                        <td class="text-right">222</td>
+                        <td class="text-right">28%</td>
+                        <td class="text-right">1,134,600</td>
+                        <td class="text-right">399,295</td>
+                        <td class="text-right">65,155</td>
+                        <td class="text-right">464,450</td>
+                        <td class="text-right">529,605</td>
+                        <td class="text-right">-419,575</td>
+                        <td class="text-right">18%</td>
+                    </tr>
+                    <tr>
+                        <td>> 2 Months</td>
+                        <td class="text-right">113</td>
+                        <td class="text-right">14%</td>
+                        <td class="text-right">348,750</td>
+                        <td class="text-right">114,230</td>
+                        <td class="text-right">67,320</td>
+                        <td class="text-right">181,550</td>
+                        <td class="text-right">248,870</td>
+                        <td class="text-right">-127,540</td>
+                        <td class="text-right">5%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td class="text-right"><strong>795</strong></td>
+                        <td class="text-right"><strong>100%</strong></td>
+                        <td class="text-right"><strong>3,643,050</strong></td>
+                        <td class="text-right"><strong>1,239,370</strong></td>
+                        <td class="text-right"><strong>134,360</strong></td>
+                        <td class="text-right"><strong>1,373,730</strong></td>
+                        <td class="text-right"><strong>1,508,090</strong></td>
+                        <td class="text-right"><strong>-2,388,938</strong></td>
+                        <td class="text-right"><strong>100%</strong></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
-    <section class="content container-fluid">
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th class="text-center">#</th>
-                    <th>Group Name</th>
-                    <th>Group ID</th>
-                    <th>Members</th>
-                    <th>Agent</th>
-                    <th>Type of Sale</th>
-                    <th>Location</th>
-                    <th>Date Created</th>
-                    <th class="text-right">Discount</th>
-                    <th class="text-right">Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="text-center">1</td>
-                    <td><a href="#group-details" data-toggle="modal"><strong>Jeremiah Group</strong></a></td>
-                    <td>A1289K</td>
-                    <td>5</td>
-                    <td>Alex Wanyama</td>
-                    <td>Cash</td>
-                    <td>Nairobi South</td>
-                    <td>23 April 2017</td>
-                    <td class="text-right">1,000</td>
-                    <td class="text-right">19,450</td>
-                </tr>
-                </tbody>
-            </table>
-            <nav aria-label="" class="text-center full-width">
-    <ul class="pagination">
-        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-        <li class=""><a href="#">2</a></li>
-        <li class=""><a href="#">3</a></li>
-        <li class=""><a href="#">4</a></li>
-        <li class="disabled"><a href="#">...</a></li>
-        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-</nav>
-        </div>
-    </div>
-</section>
+<script>
+    var ctxPAYG = document.getElementById("payg-summary-chart");
+    var dataPAYG = {
+        labels: [
+            "PAYG",
+            "Cash",
+            "Installments"
+        ],
+        datasets: [
+            {
+                data: [300, 50, 80],
+                backgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#1DA900"
+                ],
+                hoverBackgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#1DA900"
+                ]
+            }]
+    };
+    var typesChart = new Chart(ctxPAYG, {
+        type: 'doughnut',
+        data: dataPAYG
+    });
 
-<div class="modal fade" tabindex="-1" role="dialog" id="customer-new">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-primary">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Add Prospect</h4>
-            </div>
-            <div class="modal-body">
-                <div class="form">
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input class="form-control" placeholder="Enter title" />
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label>ID Number</label>
-                                <input class="form-control" placeholder="Enter ID" />
-                            </div>
-                            <div class="col-sm-6">
-                                <label>Phone Number</label>
-                                <input class="form-control" placeholder="Enter Phone Number" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Location</label>
-                        <input class="form-control" placeholder="Enter Location" />
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn bg-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
+    var ctxPAYGDelinquent = document.getElementById("payg-delinquent");
+    var dataPAYGDelinquent = {
+        labels: [
+            "Fully Paid Up",
+            "Ahead of Plan",
+            "In line with Plan",
+            "Delinquent"
+        ],
+        datasets: [
+            {
+                data: [4, 8, 2, 86],
+                backgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#1DA900",
+                    "#ba0000",
+                ],
+                hoverBackgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#1DA900",
+                    "#aa0000"
+                ]
+            }]
+    };
+    var typesChart = new Chart(ctxPAYGDelinquent, {
+        type: 'doughnut',
+        data: dataPAYGDelinquent
+    });
+
+    var ctxPAYGDefaulted = document.getElementById("payg-defaulted");
+    var dataPAYGDefaulted = {
+        labels: [
+            "91-100",
+            "100-110",
+            "110-120",
+            "120+"
+        ],
+        datasets: [
+            {
+                data: [54, 8, 38, 0],
+                backgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#1DA900",
+                    "#ff0000"
+                ],
+                hoverBackgroundColor: [
+                    "#FF6384",
+                    "#36A2EB",
+                    "#1DA900",
+                    "#ca0000"
+                ]
+            }]
+    };
+    var typesChart = new Chart(ctxPAYGDefaulted, {
+        type: 'doughnut',
+        data: dataPAYGDefaulted
+    });
+
+</script>
 </div>
 </div>
 <!-- Add Product -->

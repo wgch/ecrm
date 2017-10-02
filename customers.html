@@ -5,11 +5,18 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.0.1.min.css" />
+
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/Chart.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
+    <script type="text/javascript" src="js/fx.js"></script>
 </head>
 
 <body>
@@ -29,15 +36,20 @@
                     <li class=" active "><a href="customers.html" class="">Customers</a></li>
                     <li class=""><a href="transactions.html" class="">Transactions</a></li>
                     <li class=""><a href="products.html" class="">Products</a></li>
-                    <li class=""><a href="warranties.html" class="">Warranties</a></li>
                     <li class=""><a href="promotions.html" class="">Promotions</a></li>
-                    <li class=""><a href="reports.html" class="">Reports</a></li>
-                    <li class="">
+                    <li class=" dropdown">
+                        <a href="#" data-toggle="dropdown">Reports <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="reports.html">Overall</a></li>
+                            <li><a href="reports-paygo.html">Paygo Reports</a></li>
+                        </ul>
+                    </li>
+                    <li class=" dropdown">
                         <a href="#" class="" data-toggle="dropdown">Admin <span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-menu-right">
-                            <li class=""><a href="sms.html" class="">SMS</a></li>
-                            <li class=""><a href="agents.html" class="">Agents</a></li>
-                            <li class="divider"></li>
+                            <li><a href="warranties.html">Warranties</a></li>
+                            <li><a href="sms.html">SMS</a></li>
+                            <li><a href="agents.html">Agents</a></li>
                             <li><a href="users.html">Users</a></li>
                             <li><a href="change-password.html">Change Password</a></li>
                             <li class="divider"></li>
@@ -54,12 +66,14 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle btn-lg strong" type="button" id="customers-prospect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Customers
+                    <button class="btn btn-default dropdown-toggle" type="button" id="customers-prospect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <strong>Customers</strong>
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="customers-prospect">
-                        <li><a href="#">Customers</a></li>
+                        <li><a href="customers.html">Customers</a></li>
+                        <li><a href="customers-paygo.html">PAYG Customers</a></li>
+                        <li class="divider"></li>
                         <li><a href="#">Prospects</a></li>
                     </ul>
                 </div>
@@ -82,54 +96,52 @@
 </div>
             </div>
         </div>
-    </section>
 
-    <section class="content container">
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th class="text-center">#</th>
-                    <th>Customer</th>
-                    <th>ID Number</th>
-                    <th>Phone Number</th>
-                    <th>Location</th>
-                    <th>Credit Check</th>
-                    <th>Date Created</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="text-center">1</td>
-                    <td><a href="customers-details.html"><strong>Mary Wambui</strong></a></td>
-                    <td>2392832232</td>
-                    <td>0712 345678</td>
-                    <td>Nairobi South</td>
-                    <td><span class="text-success"><i class="fa fa-check"></i> Approved</span></td>
-                    <td>29 March 2017</td>
-                </tr>
-                <tr>
-                    <td class="text-center">2</td>
-                    <td><a href="customers-details-2.html"><strong>Tyrese Gibson</strong></a></td>
-                    <td>2392832232</td>
-                    <td>0712 345678</td>
-                    <td>Nairobi South</td>
-                    <td></td>
-                    <td>29 March 2017</td>
-                </tr>
-                <tr>
-                    <td class="text-center">3</td>
-                    <td><a href="customers-details-2.html"><strong>Nicholas Njenga</strong></a></td>
-                    <td>2392832232</td>
-                    <td>0712 345678</td>
-                    <td>Nairobi South</td>
-                    <td><span class="text-danger"><i class="fa fa-close"></i> Not Approved</span></td>
-                    <td>29 March 2017</td>
-                </tr>
-                </tbody>
-            </table>
-            <nav aria-label="" class="text-center full-width">
+        <div class="row padding-top-md">
+            <div class="col-sm-12">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="text-center">#</th>
+                        <th>Customer</th>
+                        <th>ID Number</th>
+                        <th>Phone Number</th>
+                        <th>Location</th>
+                        <th>Credit Check</th>
+                        <th>Date Created</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-center">1</td>
+                        <td><a href="customers-details.html"><strong>Mary Wambui</strong></a></td>
+                        <td>2392832232</td>
+                        <td>0712 345678</td>
+                        <td>Nairobi South</td>
+                        <td><span class="text-success"><i class="fa fa-check"></i> Approved</span></td>
+                        <td>29 March 2017</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2</td>
+                        <td><a href="customers-details-2.html"><strong>Tyrese Gibson</strong></a></td>
+                        <td>2392832232</td>
+                        <td>0712 345678</td>
+                        <td>Nairobi South</td>
+                        <td></td>
+                        <td>29 March 2017</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">3</td>
+                        <td><a href="customers-details-2.html"><strong>Nicholas Njenga</strong></a></td>
+                        <td>2392832232</td>
+                        <td>0712 345678</td>
+                        <td>Nairobi South</td>
+                        <td><span class="text-danger"><i class="fa fa-close"></i> Not Approved</span></td>
+                        <td>29 March 2017</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="" class="text-center full-width">
     <ul class="pagination">
         <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
         <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
@@ -140,9 +152,9 @@
         <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
     </ul>
 </nav>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <div class="modal fade" tabindex="-1" role="dialog" id="customer-new">
     <div class="modal-dialog" role="document">

@@ -22,8 +22,7 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-
-<section class="header">
+    <section class="header">
     <div class="container">
         <div class="row">
             <div class="col-sm-2">
@@ -62,13 +61,24 @@
     </div>
 </section>
 
-<section class="top-nav container-fluid">
-    <div class="row">
-        <div class="col-sm-3">
-            <h3>Warranties</h3>
-        </div>
-        <div class="col-sm-9">
-            <div class="filter text-right full-width">
+    <section class="top-nav container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="customers-prospect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <strong>PAYG Customers</strong>
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="customers-prospect">
+                        <li><a href="customers.html">Customers</a></li>
+                        <li><a href="customers-paygo.html">PAYG Customers</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Prospects</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div class="filter text-right full-width">
     <ul class="list-inline">
         
         
@@ -83,32 +93,246 @@
         
     </ul>
 </div>
+            </div>
         </div>
-    </div>
-</section>
-
-<section class="content container-fluid">
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th class="text-center">#</th>
-                    <th>Serial</th>
-                    <th>Date Added</th>
-                    <th>Status</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="text-center">1</td>
-                    <td>E2143412</td>
-                    <td>+23 August 2017</td>
-                    <td>Warehouse</td>
-                </tr>
-                </tbody>
-            </table>
-            <nav aria-label="" class="text-center full-width">
+    </section>
+    <section class="content container">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered text-nowrap table-striped table-hover" id="table-payg">
+                    <thead>
+                    <tr>
+                        <th rowspan="2" class="text-center">#</th>
+                        <th rowspan="2">Customer</th>
+                        <th rowspan="2">Initiated</th>
+                        <th rowspan="2">Total Amount Payable</th>
+                        <th rowspan="2">Deposit Paid</th>
+                        <th rowspan="2" title="Net Amount Payable after deducting Deposit">Net Amount</th>
+                        <th rowspan="2" title="(Total - Deposit divided by 90)">Daily Repayments Due</th>
+                        <th rowspan="2" title="Days Since Repayment Plan Commenced">Days Since Repayment<br />Plan Commenced</th>
+                        <th rowspan="2">Amount Accumulated AOP</th>
+                        <th rowspan="2">Actual Repayments Made </th>
+                        <th rowspan="2">Late Repayments</th>
+                        <th rowspan="2" title="Total Amount Paid So Far (Deposit & Repayments)">Amount Paid</th>
+                        <th rowspan="2" title="Total Amount Customer Still Owes">Amount Owing</th>
+                        <th colspan="4" class="text-center">Default Escalation Levels</th>
+                        <th rowspan="2">Comment After Call</th>
+                    </tr>
+                    <tr>
+                        <th title="Level 1 Escalation-CCM follow up(Day 90-100)">Level 1<br />CCM follow up(Day 90-100)</th>
+                        <th title="Level 2 Escalation-DSR follows up(Day 100-110)">Level 2<br />DSR follows up(Day 100-110)</th>
+                        <th title="Level 3 Escalation-Debt Collector Follows up(Day 110-120)">Level 3<br />Debt Collector Follows up(Day 110-120)</th>
+                        <th title="Level 4 Escalation(Report to CRB)-CCM forwards to CRB(Day 120 and onwards)">Level 4<br />CCM forwards to CRB(Day 120 and onwards)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>KENNEDY OTIENO OJWANG</td>
+                        <td>Thu Dec 15 2016 12:00:00 GMT+0300</td>
+                        <td>4,650</td>
+                        <td>1,500</td>
+                        <td>3,150</td>
+                        <td>35</td>
+                        <td>89</td>
+                        <td>3,115</td>
+                        <td>450</td>
+                        <td>2,665</td>
+                        <td>1,950</td>
+                        <td>-2,700</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Hanah wanjiru Mwangi </td>
+                        <td>Thu Dec 15 2016 12:00:00 GMT+0300</td>
+                        <td>4,650</td>
+                        <td>1,500</td>
+                        <td>3,150</td>
+                        <td>35</td>
+                        <td>89</td>
+                        <td>3,115</td>
+                        <td>450</td>
+                        <td>2,665</td>
+                        <td>1,950</td>
+                        <td>-2,700</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td></td>
+                        <td></td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Eunice Ashika Ouko</td>
+                        <td>Thu Dec 15 2016 12:00:00 GMT+0300</td>
+                        <td>4,650</td>
+                        <td>1,500</td>
+                        <td>3,150</td>
+                        <td>35</td>
+                        <td>89</td>
+                        <td>3,115</td>
+                        <td>450</td>
+                        <td>2,665</td>
+                        <td>1,950</td>
+                        <td>-2,700</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sylvester Ouma Eshihunua</td>
+                        <td>Thu Dec 15 2016 12:00:00 GMT+0300</td>
+                        <td>4,650</td>
+                        <td>1,500</td>
+                        <td>3,150</td>
+                        <td>35</td>
+                        <td>89</td>
+                        <td>3,115</td>
+                        <td>450</td>
+                        <td>2,665</td>
+                        <td>1,950</td>
+                        <td>-2,700</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Christine Adhiambo Atho</td>
+                        <td>Thu Dec 15 2016 12:00:00 GMT+0300</td>
+                        <td>4,650</td>
+                        <td>1,500</td>
+                        <td>3,150</td>
+                        <td>35</td>
+                        <td>89</td>
+                        <td>3,115</td>
+                        <td>450</td>
+                        <td>2,665</td>
+                        <td>1,950</td>
+                        <td>-2,700</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rutherford Jefferys Magang</td>
+                        <td>Thu Dec 15 2016 12:00:00 GMT+0300</td>
+                        <td>4,650</td>
+                        <td>1,500</td>
+                        <td>3,150</td>
+                        <td>35</td>
+                        <td>89</td>
+                        <td>3,115</td>
+                        <td>450</td>
+                        <td>2,665</td>
+                        <td>1,950</td>
+                        <td>-2,700</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Gladys Mokaya</td>
+                        <td>Thu Dec 15 2016 12:00:00 GMT+0300</td>
+                        <td>4,650</td>
+                        <td>1,500</td>
+                        <td>3,150</td>
+                        <td>35</td>
+                        <td>89</td>
+                        <td>3,115</td>
+                        <td>450</td>
+                        <td>2,665</td>
+                        <td>1,950</td>
+                        <td>-2,700</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Pauline Wambui Nguru</td>
+                        <td>Thu Dec 15 2016 12:00:00 GMT+0300</td>
+                        <td>4,650</td>
+                        <td>1,500</td>
+                        <td>3,150</td>
+                        <td>35</td>
+                        <td>89</td>
+                        <td>3,115</td>
+                        <td>450</td>
+                        <td>2,665</td>
+                        <td>1,950</td>
+                        <td>-2,700</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Elishipha Njoki Gacheru</td>
+                        <td>Thu Dec 15 2016 12:00:00 GMT+0300</td>
+                        <td>4,650</td>
+                        <td>1,500</td>
+                        <td>3,150</td>
+                        <td>35</td>
+                        <td>89</td>
+                        <td>3,115</td>
+                        <td>450</td>
+                        <td>2,665</td>
+                        <td>1,950</td>
+                        <td>-2,700</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Natasha Kisungu</td>
+                        <td>Thu Dec 15 2016 12:00:00 GMT+0300</td>
+                        <td>4,650</td>
+                        <td>1,500</td>
+                        <td>3,150</td>
+                        <td>35</td>
+                        <td>89</td>
+                        <td>3,115</td>
+                        <td>450</td>
+                        <td>2,665</td>
+                        <td>1,950</td>
+                        <td>-2,700</td>
+                        <td>Called on 1st Mar,has a patient by will try and pay by 5th Mar</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                    </tr>
+                    </tfoot>
+                </table>
+                <nav aria-label="" class="text-center full-width">
     <ul class="pagination">
         <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
         <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
@@ -119,9 +343,48 @@
         <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
     </ul>
 </nav>
+            </div>
+        </div>
+    </section>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="customer-new">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Add Prospect</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input class="form-control" placeholder="Enter title" />
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>ID Number</label>
+                                <input class="form-control" placeholder="Enter ID" />
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Phone Number</label>
+                                <input class="form-control" placeholder="Enter Phone Number" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input class="form-control" placeholder="Enter Location" />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-primary">Save changes</button>
+            </div>
         </div>
     </div>
-</section>
+</div>
 </div>
 </div>
 <!-- Add Product -->
