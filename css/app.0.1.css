@@ -616,3 +616,7 @@ body {
   padding: 5px 10px;
   color: #000;
 }
+
+table.table tfoot tr td {
+  border-top: #aaa solid 2px;
+}
