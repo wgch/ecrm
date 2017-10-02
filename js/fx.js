@@ -5,7 +5,7 @@ $(document).ready(function() {
         scrollCollapse: true,
         paging:         false,
         fixedColumns:   {
-            leftColumns: 2,
+            leftColumns: 3,
         },
         searching: false,
         ordering: false,
