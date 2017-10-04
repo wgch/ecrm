@@ -620,3 +620,8 @@ body {
 table.table tfoot tr td {
   border-top: #aaa solid 2px;
 }
+
+.dropdown.open {
+  z-index: 1000000000000;
+  position: relative;
+}

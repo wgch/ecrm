@@ -62,11 +62,11 @@
     </div>
 </section>
 
-    <section class="top-nav container-fluid">
+    <section class="top-nav container ">
         <div class="row">
             <div class="col-sm-3">
                 <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle btn-lg strong" type="button" id="customers-prospect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <button class="btn btn-default dropdown-toggle strong" type="button" id="customers-prospect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         Sales
                         <span class="caret"></span>
                     </button>
@@ -96,21 +96,27 @@
         </div>
     </section>
 
-    <section class="content container-fluid">
+    <section class="content container">
         <div class="row">
             <div class="col-sm-12">
-                <table class="table table-bordered">
+                <table class="table table-bordered text-nowrap table-striped table-hover" id="table-sales">
                     <thead>
                     <tr>
                         <th class="text-center">#</th>
                         <th>Customer</th>
-                        <th>ID & Phone Number</th>
-                        <th>Agent</th>
+                        <th>ID</th>
+                        <th>Phone Number</th>
+                        <th>Location</th>
                         <th>Type of Sale</th>
+                        <th>Serial Number</th>
                         <th>Product</th>
+                        <th>Agent</th>
                         <th>Date</th>
-                        <th class="text-right">Amount (KES)</th>
-                        <th>Completed</th>
+                        <th class="text-right">RRP (KES)</th>
+                        <th class="text-right">Discount</th>
+                        <th class="text-right">Deposit</th>
+                        <th class="text-right">Paid</th>
+                        <th>C</th>
                         <th class="text-right">Actions</th>
                     </tr>
                     </thead>
@@ -118,26 +124,44 @@
                     <tr>
                         <td class="text-center">1</td>
                         <td><a href="customers-details.html"><strong>Mary Wambui</strong></a></td>
-                        <td><i class="fa fa-phone"></i> 0712345678<br /><small><strong>ID: </strong> 23232323</small></td>
-                        <td><a href="agent-details.html"><strong>Wilfred Bond</strong></a></td>
+                        <td>23232323</td>
+                        <td>0712345678</td>
+                        <td>Nairobi</td>
                         <td>Cash</td>
+                        <td>E1292019</td>
                         <td><a href="product-details.html">Envirofit Smartsaver Wood Jiko</a></td>
-                        <td>Today</td>
-                        <td class="text-right">4,900</td>
+                        <td><a href="agent-details.html"><strong>Wilfred Bond</strong></a></td>
+                        <td>23 June 2017</td>
+                        <td class="text-right">2290</td>
+                        <td class="text-right">200</td>
+                        <td class="text-right">1000</td>
+                        <td class="text-right">1090</td>
                         <td class="text-center"><i class="fa fa-check text-success"></i></td>
-                        <td></td>
+                        <td class="text-center">
+                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                            <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-refund"><i class="fa fa-reply"></i></button>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="text-center">2</td>
-                        <td><a href="customers-details.html"><strong>Monicah Were</strong></a></td>
-                        <td><i class="fa fa-phone"></i> 0712345678<br /><small><strong>ID: </strong> 23232323</small></td>
+                        <td class="text-center">1</td>
+                        <td><a href="customers-details.html"><strong>KENNEDY ODHIAMBO MIYARE</strong></a></td>
+                        <td>23232323</td>
+                        <td>0712345678</td>
+                        <td>Nairobi</td>
+                        <td>Cash</td>
+                        <td>E1292019</td>
+                        <td><a href="product-details.html">Envirofit Smartsaver Wood Jiko</a></td>
                         <td><a href="agent-details.html"><strong>Wilfred Bond</strong></a></td>
-                        <td>PAYG</td>
-                        <td><a href="product-details.html">Envirofit Smartsaver Jiko</a></td>
-                        <td>23 Jan 2017</td>
-                        <td class="text-right">400</td>
-                        <td class="text-right"></td>
-                        <td></td>
+                        <td>23 June 2017</td>
+                        <td class="text-right">2290</td>
+                        <td class="text-right">200</td>
+                        <td class="text-right">1000</td>
+                        <td class="text-right">1090</td>
+                        <td class="text-center"><i class="fa fa-check text-success"></i></td>
+                        <td class="text-center">
+                            <button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+                            <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-refund"><i class="fa fa-reply"></i></button>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
@@ -215,6 +239,92 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn bg-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-refund">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Issue Refund</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h3>Maina Njenga</h3>
+                        <ol class="padding-sm list-inline">
+                            <li><strong>Phone Number:</strong></li>
+                            <li><strong>ID Number:</strong></li>
+                            <li><strong>CRB Check:</strong></li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <button type="button" class="btn btn-default">Issue Refund</button>
+                    </div>
+                    <div class="col-sm-12">
+                        <table class="table table-responsive table-bordered">
+                            <tr class="bg-grey-light">
+                                <th>Date</th>
+                                <th>Product</th>
+                                <th>ID</th>
+                                <th class="text-right">Amount</th>
+                                <th class="text-right">Discount</th>
+                                <th class="text-right">Total</th>
+                            </tr>
+                            <tr>
+                                <td>3 May 2016</td>
+                                <td>Envirofit Smartgrill</td>
+                                <td>ELJ9090090</td>
+                                <td class="text-right">2000</td>
+                                <td class="text-right">200</td>
+                                <td class="text-right">5000</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class=""><strong>Total</strong></td>
+                                <td class="text-right"><strong>200</strong></td>
+                                <td class="text-right text-danger"><strong>5000</strong></td>
+                            </tr>
+                            <tr class="bg-grey-light">
+                                <td colspan="6"><small><strong>Transactions</strong></small></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="">4th June 2017</td>
+                                <td>L19210910921</td>
+                                <td class="text-right">9000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="">4th June 2017</td>
+                                <td>L19210910921</td>
+                                <td class="text-right">9000</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class=""><strong>Total</strong></td>
+                                <td colspan="2" class="text-right text-success"><strong>18000</strong></td>
+                            </tr>
+                            <tr class="bg-danger">
+                                <td colspan="4" class=""><strong>Net</strong></td>
+                                <td colspan="2" class="text-right"><strong>13000</strong></td>
+                            </tr>
+                            <tr class="bg-grey-light">
+                                <td colspan="6"><small><strong>Refund Transaction</strong></small></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="">4th June 2017</td>
+                                <td>L19210910921</td>
+                                <td colspan="3" class="text-right">13000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
