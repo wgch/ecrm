@@ -22,7 +22,6 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-    
     <section class="header">
     <div class="container">
         <div class="row">
@@ -32,8 +31,21 @@
             <div class="col-sm-10">
                 <ul class="navigation list-inline">
                     <li class=""><a href="tickets.html" class="">Tickets</a></li>
-                    <li class=" active "><a href="sales.html" class="">Sales</a></li>
-                    <li class=""><a href="customers.html" class="">Customers</a></li>
+                    <li class=" active  dropdown">
+                        <a href="sales.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Sales <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="customers-prospect">
+                            <li><a href="sales.html">Sales</a></li>
+                            <li><a href="sales-groups.html">Group Sales</a></li>
+                            <li><a href="sales-paygo.html">PAYG Sales</a></li>
+                        </ul>
+                    </li>
+                    <li class=" dropdown">
+                        <a href="customers.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Customers <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="customers-prospect">
+                            <li><a href="customers.html">Customers</a></li>
+                            <li><a href="prospects.html">Prospects</a></li>
+                        </ul>
+                    </li>
                     <li class=""><a href="transactions.html" class="">Transactions</a></li>
                     <li class=""><a href="products.html" class="">Products</a></li>
                     <li class=""><a href="promotions.html" class="">Promotions</a></li>
@@ -62,18 +74,11 @@
     </div>
 </section>
 
-    <section class="top-nav container-fluid">
+    <section class="top-nav container">
         <div class="row">
             <div class="col-sm-3">
                 <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle btn-lg strong" type="button" id="customers-prospect" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Groups
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="customers-prospect">
-                        <li><a href="sales.html">Sales</a></li>
-                        <li><a href="groups.html">Group Sales</a></li>
-                    </ul>
+                    <h3>PAYG Sales</h3>
                 </div>
             </div>
             <div class="col-sm-9">
@@ -95,41 +100,207 @@
             </div>
         </div>
     </section>
-
-    <section class="content container-fluid">
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th class="text-center">#</th>
-                    <th>Group Name</th>
-                    <th>Group ID</th>
-                    <th>Members</th>
-                    <th>Agent</th>
-                    <th>Type of Sale</th>
-                    <th>Location</th>
-                    <th>Date Created</th>
-                    <th class="text-right">Discount</th>
-                    <th class="text-right">Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="text-center">1</td>
-                    <td><a href="#group-details" data-toggle="modal"><strong>Jeremiah Group</strong></a></td>
-                    <td>A1289K</td>
-                    <td>5</td>
-                    <td>Alex Wanyama</td>
-                    <td>Cash</td>
-                    <td>Nairobi South</td>
-                    <td>23 April 2017</td>
-                    <td class="text-right">1,000</td>
-                    <td class="text-right">19,450</td>
-                </tr>
-                </tbody>
-            </table>
-            <nav aria-label="" class="text-center full-width">
+    <section class="content container">
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-bordered text-nowrap table-striped table-hover" id="table-payg">
+                    <thead>
+                    <tr>
+                        <th class="text-center">#</th>
+                        <th>Customer</th>
+                        <th title="Total Amount Customer Still Owes">Amount<br />Owing</th>
+                        <th>Initiated</th>
+                        <th>Total Amount Payable</th>
+                        <th>Deposit Paid</th>
+                        <th title="Net Amount Payable after deducting Deposit">Net Amount</th>
+                        <th title="(Total - Deposit divided by 90)">Daily Repayments Due</th>
+                        <th title="Days Since Repayment Plan Commenced">Days Since Repayment<br />Plan Commenced</th>
+                        <th>Amount Accumulated AOP</th>
+                        <th>Actual Repayments Made </th>
+                        <th>Late Repayments</th>
+                        <th title="Total Amount Paid So Far (Deposit & Repayments)">Amount Paid</th>
+                        <th title="Total Amount Customer Still Owes">Amount Owing</th>
+                        <th>Comment After Call</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>KENNEDY OTIENO OJWANG</td>
+                        <td class="text-right">1,700</td>
+                        <td>23 January 2017</td>
+                        <td class="text-right">4,650</td>
+                        <td class="text-right">1,500</td>
+                        <td class="text-right">3,150</td>
+                        <td class="text-right">35</td>
+                        <td class="text-right">89</td>
+                        <td class="text-right">3,115</td>
+                        <td class="text-right">450</td>
+                        <td class="text-right">2,665</td>
+                        <td class="text-right">1,950</td>
+                        <td class="text-right">-2,700</td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Hanah wanjiru Mwangi </td>
+                        <td class="text-right">700</td>
+                        <td>23 February 2017</td>
+                        <td class="text-right">4,650</td>
+                        <td class="text-right">1,500</td>
+                        <td class="text-right">3,150</td>
+                        <td class="text-right">35</td>
+                        <td class="text-right">89</td>
+                        <td class="text-right">3,115</td>
+                        <td class="text-right">450</td>
+                        <td class="text-right">2,665</td>
+                        <td class="text-right">1,950</td>
+                        <td class="text-right">-2,700</td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Eunice Ashika Ouko</td>
+                        <td class="text-right">700</td>
+                        <td>23 March 2017</td>
+                        <td class="text-right">4,650</td>
+                        <td class="text-right">1,500</td>
+                        <td class="text-right">3,150</td>
+                        <td class="text-right">35</td>
+                        <td class="text-right">89</td>
+                        <td class="text-right">3,115</td>
+                        <td class="text-right">450</td>
+                        <td class="text-right">2,665</td>
+                        <td class="text-right">1,950</td>
+                        <td class="text-right">-2,700</td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sylvester Ouma Eshihunua</td>
+                        <td class="text-right">2,700</td>
+                        <td>23 April 2017</td>
+                        <td class="text-right">4,650</td>
+                        <td class="text-right">1,500</td>
+                        <td class="text-right">3,150</td>
+                        <td class="text-right">35</td>
+                        <td class="text-right">89</td>
+                        <td class="text-right">3,115</td>
+                        <td class="text-right">450</td>
+                        <td class="text-right">2,665</td>
+                        <td class="text-right">1,950</td>
+                        <td class="text-right">-2,700</td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Christine Adhiambo Atho</td>
+                        <td class="text-right">700</td>
+                        <td>23 May 2017</td>
+                        <td class="text-right">4,650</td>
+                        <td class="text-right">1,500</td>
+                        <td class="text-right">3,150</td>
+                        <td class="text-right">35</td>
+                        <td class="text-right">89</td>
+                        <td class="text-right">3,115</td>
+                        <td class="text-right">450</td>
+                        <td class="text-right">2,665</td>
+                        <td class="text-right">1,950</td>
+                        <td class="text-right">-2,700</td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Rutherford Jefferys Magang</td>
+                        <td class="text-right">2,000</td>
+                        <td>23 June 2017</td>
+                        <td class="text-right">4,650</td>
+                        <td class="text-right">1,500</td>
+                        <td class="text-right">3,150</td>
+                        <td class="text-right">35</td>
+                        <td class="text-right">89</td>
+                        <td class="text-right">3,115</td>
+                        <td class="text-right">450</td>
+                        <td class="text-right">2,665</td>
+                        <td class="text-right">1,950</td>
+                        <td class="text-right">-2,700</td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Gladys Mokaya</td>
+                        <td class="text-right">2,000</td>
+                        <td>23 July 2017</td>
+                        <td class="text-right">4,650</td>
+                        <td class="text-right">1,500</td>
+                        <td class="text-right">3,150</td>
+                        <td class="text-right">35</td>
+                        <td class="text-right">89</td>
+                        <td class="text-right">3,115</td>
+                        <td class="text-right">450</td>
+                        <td class="text-right">2,665</td>
+                        <td class="text-right">1,950</td>
+                        <td class="text-right">-2,700</td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Pauline Wambui Nguru</td>
+                        <td class="text-right">2,000</td>
+                        <td>23 August 2017</td>
+                        <td class="text-right">4,650</td>
+                        <td class="text-right">1,500</td>
+                        <td class="text-right">3,150</td>
+                        <td class="text-right">35</td>
+                        <td class="text-right">89</td>
+                        <td class="text-right">3,115</td>
+                        <td class="text-right">450</td>
+                        <td class="text-right">2,665</td>
+                        <td class="text-right">1,950</td>
+                        <td class="text-right">-2,700</td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Elishipha Njoki Gacheru</td>
+                        <td class="text-right">2,000</td>
+                        <td>23 September 2017</td>
+                        <td class="text-right">4,650</td>
+                        <td class="text-right">1,500</td>
+                        <td class="text-right">3,150</td>
+                        <td class="text-right">35</td>
+                        <td class="text-right">89</td>
+                        <td class="text-right">3,115</td>
+                        <td class="text-right">450</td>
+                        <td class="text-right">2,665</td>
+                        <td class="text-right">1,950</td>
+                        <td class="text-right">-2,700</td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Natasha Kisungu</td>
+                        <td class="text-right">2,000</td>
+                        <td>23 October 2017</td>
+                        <td class="text-right">4,650</td>
+                        <td class="text-right">1,500</td>
+                        <td class="text-right">3,150</td>
+                        <td class="text-right">35</td>
+                        <td class="text-right">89</td>
+                        <td class="text-right">3,115</td>
+                        <td class="text-right">450</td>
+                        <td class="text-right">2,665</td>
+                        <td class="text-right">1,950</td>
+                        <td class="text-right">-2,700</td>
+                        <td>Promised to pay at the end of the week</td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                    </tr>
+                    </tfoot>
+                </table>
+                <nav aria-label="" class="text-center full-width">
     <ul class="pagination">
         <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
         <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
@@ -140,9 +311,9 @@
         <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
     </ul>
 </nav>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <div class="modal fade" tabindex="-1" role="dialog" id="customer-new">
     <div class="modal-dialog" role="document">
