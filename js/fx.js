@@ -25,4 +25,16 @@ $(document).ready(function() {
         ordering: false,
         info: false
     });
+    var tableAgents = $('#table-agents').DataTable( {
+        responsive: true,
+        scrollX:        true,
+        scrollCollapse: true,
+        paging:         false,
+        fixedColumns:   {
+            leftColumns: 1
+        },
+        searching: false,
+        ordering: false,
+        info: false
+    });
 } );

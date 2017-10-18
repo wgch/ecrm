@@ -40,7 +40,7 @@
                             <li><a href="sales-paygo.html">PAYG Sales</a></li>
                         </ul>
                     </li>
-                    <li class=" active  dropdown">
+                    <li class=" dropdown">
                         <a href="customers.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Customers <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="customers-prospect">
                             <li><a href="customers.html">Customers</a></li>
@@ -50,7 +50,7 @@
                     <li class=""><a href="transactions.html" class="">Transactions</a></li>
                     <li class=""><a href="products.html" class="">Products</a></li>
                     <li class=""><a href="promotions.html" class="">Promotions</a></li>
-                    <li class=" dropdown">
+                    <li class=" active  dropdown">
                         <a href="#" data-toggle="dropdown">Reports <span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-menu-right">
                             <!--<li><a href="reports.html">Overall</a></li>-->
@@ -81,21 +81,19 @@
     <section class="top-nav container">
         <div class="row">
             <div class="col-sm-3">
-                <div class="dropdown">
-                    <h3>All Customers</h3>
-                </div>
+                <h3>Agent Reports</h3>
             </div>
             <div class="col-sm-9">
                 <div class="filter text-right full-width">
     <ul class="list-inline">
         
-        <li><button class="btn btn-default btn-sm"><strong>Payment Type</strong> <span class="caret"></span></button></li>
+        
         <li><button class="btn btn-default btn-sm">List 10 <span class="caret"></span></button></li></li>
         <li><input class="form-control input-sm" type="text" placeholder="Search" /></li>
         <li><button class="btn btn-default btn-sm"><i class="fa fa-calendar"></i> <strong>January 1, 2017</strong> - <strong>April 1, 2017</strong> <span class="caret"></span> </button></li>
         <li><button class="btn btn-info btn-sm"><strong>Export</strong></button></li>
         
-        <li><button class="btn bg-primary btn-sm" data-toggle="modal" data-target="#customer-new"><strong>+ New Prospect</strong></button></li>
+        
         
         
         
@@ -106,109 +104,54 @@
 
         <div class="row padding-top-md">
             <div class="col-sm-12">
-                <table class="table table-bordered">
+                <table class="table text-nowrap table-responsive table-bordered" id="table-agents">
                     <thead>
                     <tr>
-                        <th class="text-center">#</th>
-                        <th>Customer</th>
-                        <th>ID Number</th>
-                        <th>Phone Number</th>
-                        <th>Location</th>
-                        <th>Credit Check</th>
-                        <th>CRB Check</th>
-                        <th>Date Created</th>
-                        <th>Actions</th>
+                        <th rowspan="2">Agent</th>
+                        <th colspan="7" class="text-center">Commissions</th>
+                        <th rowspan="2" class="bg-grey-light"></th>
+                        <th colspan="6" class="text-center">Product Status</th>
+                    </tr>
+                    <tr>
+                        <th>Last Activity</th>
+                        <th>Agent Status</th>
+                        <th>Cash</th>
+                        <th>PAYG</th>
+                        <th>Future PAYG</th>
+                        <th>Incentive</th>
+                        <th>Total</th>
+                        <th>Issued</th>
+                        <th>Received</th>
+                        <th>Returned</th>
+                        <th>Sold</th>
+                        <th>Stock Balance</th>
+                        <th>Total</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="text-center">1</td>
-                        <td><a href="customers-details.html"><strong>Mary Wambui</strong></a></td>
-                        <td>2392832232</td>
-                        <td>0712 345678</td>
-                        <td>Nairobi South</td>
-                        <td><span class="text-success"><i class="fa fa-check"></i> Approved</span></td>
-                        <td>435</td>
-                        <td>29 March 2017</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">2</td>
-                        <td><a href="customers-details-2.html"><strong>Tyrese Gibson</strong></a></td>
-                        <td>2392832232</td>
-                        <td>0712 345678</td>
-                        <td>Nairobi South</td>
-                        <td></td>
-                        <td>435</td>
-                        <td>29 March 2017</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">3</td>
-                        <td><a href="customers-details-2.html"><strong>Nicholas Njenga</strong></a></td>
-                        <td>2392832232</td>
-                        <td>0712 345678</td>
-                        <td>Nairobi South</td>
-                        <td><span class="text-danger"><i class="fa fa-close"></i> Not Approved</span></td>
-                        <td>435</td>
-                        <td>29 March 2017</td>
-                        <td></td>
+                        <td>Maina Karagu Junior</td>
+                        <td>4:12pm, 12 Jan 2017</td>
+                        <td>DSR</td>
+                        <td>12,091</td>
+                        <td>12,091</td>
+                        <td>12,091</td>
+                        <td>12,091</td>
+                        <td>48,120</td>
+                        <td class="bg-grey-light"></td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>12</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>19</td>
                     </tr>
                     </tbody>
                 </table>
-                <nav aria-label="" class="text-center full-width">
-    <ul class="pagination">
-        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-        <li class=""><a href="#">2</a></li>
-        <li class=""><a href="#">3</a></li>
-        <li class=""><a href="#">4</a></li>
-        <li class="disabled"><a href="#">...</a></li>
-        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-</nav>
             </div>
         </div>
     </section>
 
-<div class="modal fade" tabindex="-1" role="dialog" id="customer-new">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-primary">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Add Prospect</h4>
-            </div>
-            <div class="modal-body">
-                <div class="form">
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input class="form-control" placeholder="Enter title" />
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label>ID Number</label>
-                                <input class="form-control" placeholder="Enter ID" />
-                            </div>
-                            <div class="col-sm-6">
-                                <label>Phone Number</label>
-                                <input class="form-control" placeholder="Enter Phone Number" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Location</label>
-                        <input class="form-control" placeholder="Enter Location" />
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn bg-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 </div>
 <!-- Add Product -->
