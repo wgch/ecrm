@@ -625,3 +625,7 @@ table.table tfoot tr td {
   z-index: 1000000000000;
   position: relative;
 }
+
+.text-underline {
+  border-bottom: #000 solid 1px;
+}

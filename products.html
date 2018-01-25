@@ -86,8 +86,8 @@
         </div>
     </section>
 
-    <section class="content container-fluid">
-        <div class="row">
+    <section class="content container">
+        <div class="">
             <div class="">
                 <ul class="col-sm-3 nav nav-pills nav-stacked margin-bottom-lg" role="tablist">
                     <li role="presentation" class="active"><a href="#tab-001" data-toggle="tab">Envirofit Supersaver Charcoal Jiko</a></li>
@@ -100,13 +100,15 @@
                 <div role="tabpanel" class="tab-pane active" id="tab-001">
                     <h4 class="padding-bottom-md"><strong>Envirofit Supersaver Charcoal Jiko</strong></h4>
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#pricing" role="tab" data-toggle="tab">Pricing</a></li>
+                        <li role="presentation" class=""><a href="#pricing" role="tab" data-toggle="tab">Pricing</a></li>
                         <li role="presentation" class=""><a href="#discounts" role="tab" data-toggle="tab">Discounts</a></li>
                         <li role="presentation" class=""><a href="#dispatch" role="tab" data-toggle="tab">Dispatch</a></li>
+                        <li role="presentation" class="active"><a href="#partners" role="tab" data-toggle="tab">Partners</a></li>
+                        <li role="presentation" class=""><a href="#bulk-dispatch" role="tab" data-toggle="tab">Bulk Dispatch</a></li>
                     </ul>
 
                     <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="pricing">
+                        <div role="tabpanel" class="tab-pane" id="pricing">
                             <div class="top-actions">
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -288,6 +290,115 @@
                                     <td>3 April 2017</td>
                                     <td>Nairobi Group</td>
                                     <td>Assigned</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <nav aria-label="" class="text-center full-width">
+    <ul class="pagination">
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+        <li class="disabled"><a href="#">...</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="bulk-dispatch">
+                            <div class="top-actions">
+                                <div class="form-horizontal">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <label for="" class="padding-right-md">Select Partner</label>
+                                            <select class="form-control">
+                                                <option selected>Select Partner</option>
+                                                <option>Nairobi Partner</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <label for="" class="padding-right-md">Upload CSV <a href="#" class="small text-underline">(Sample)</a> </label>
+                                            <input type="file" placeholder="" class="form-control">
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <label>&nbsp;</label><br />
+                                            <button class="btn bg-primary">Upload</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Date Dispatched</th>
+                                    <th>Partner</th>
+                                    <th>Region</th>
+                                    <th>Dispatched Products</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td>23 Nov 2016</td>
+                                    <td>Nairobi Partner</td>
+                                    <td>Nairobi</td>
+                                    <td>340</td>
+                                    <td class="text-center"><button class="btn btn-info btn-sm">Download CSV</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <nav aria-label="" class="text-center full-width">
+    <ul class="pagination">
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="#">2</a></li>
+        <li class=""><a href="#">3</a></li>
+        <li class=""><a href="#">4</a></li>
+        <li class="disabled"><a href="#">...</a></li>
+        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane active" id="partners">
+                            <div class="top-actions">
+                                <div class="form-horizontal">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <label for="" class="">New Partner</label>
+                                            <input type="text" class="form-control" placeholder="Enter Serial Number">
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <label for="" class="">Region</label>
+                                            <select class="form-control">
+                                                <option>Nairobi</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xs-4 text-right">
+                                            <label>&nbsp;</label><br />
+                                            <button class="btn bg-primary">Add Partner</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="text-center">#</th>
+                                    <th>Partner</th>
+                                    <th>Region</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td>Nairobi Partner</td>
+                                    <td>Nairobi</td>
+                                    <td class="text-center"><button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#removal-partner">Remove</button></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -603,6 +714,43 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Create Message -->
+<div class="modal fade" tabindex="-1" role="dialog" id="send-message">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Send Message</h4>
+            </div>
+            <div class="modal-body">
+                <div class="well">
+                    <label>Custom Addons</label>
+                    <ul class="list-unstyled">
+                        <li><strong>[first_name]</strong> - customer's first name</li>
+                        <li><strong>[last_name]</strong> - customer's last name</li>
+                        <li><strong>[balance]</strong> - Payment balance</li>
+                        <li><strong>[date_due]</strong> - Payment balance</li>
+                    </ul>
+                </div>
+                <label>Select CSV File</label>
+                <div class="well">
+                    <input type="file" placeholder="Choose file" />
+                </div>
+                <label>Message</label>
+                <textarea rows="5" class="form-control"></textarea>
+                <div class="row">
+                    <small class="col-xs-6">123 characters remaining</small>
+                    <small class="col-xs-6 text-right">1 SMS</small>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-primary">Send Message</button>
             </div>
         </div>
     </div>

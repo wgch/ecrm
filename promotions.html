@@ -78,7 +78,7 @@
     </div>
 </section>
 
-<section class="top-nav container-fluid">
+<section class="top-nav container">
     <div class="row">
         <div class="col-sm-3">
             <h3><strong>Promotions</strong></h3>
@@ -97,13 +97,14 @@
         
         
         <li><button class="btn bg-primary btn-sm" data-toggle="collapse" data-target="#add-promotion"><strong>+ New Promotion</strong></button></li>
+        
     </ul>
 </div>
         </div>
     </div>
 </section>
 
-<section class="content container-fluid">
+<section class="content container">
     <div class="well collapse" id="add-promotion">
         <div class="row">
             <div class="col-sm-12">
@@ -570,6 +571,43 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Create Message -->
+<div class="modal fade" tabindex="-1" role="dialog" id="send-message">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-primary">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Send Message</h4>
+            </div>
+            <div class="modal-body">
+                <div class="well">
+                    <label>Custom Addons</label>
+                    <ul class="list-unstyled">
+                        <li><strong>[first_name]</strong> - customer's first name</li>
+                        <li><strong>[last_name]</strong> - customer's last name</li>
+                        <li><strong>[balance]</strong> - Payment balance</li>
+                        <li><strong>[date_due]</strong> - Payment balance</li>
+                    </ul>
+                </div>
+                <label>Select CSV File</label>
+                <div class="well">
+                    <input type="file" placeholder="Choose file" />
+                </div>
+                <label>Message</label>
+                <textarea rows="5" class="form-control"></textarea>
+                <div class="row">
+                    <small class="col-xs-6">123 characters remaining</small>
+                    <small class="col-xs-6 text-right">1 SMS</small>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn bg-primary">Send Message</button>
             </div>
         </div>
     </div>
