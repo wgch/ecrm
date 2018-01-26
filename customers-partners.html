@@ -40,7 +40,7 @@
                             <li><a href="sales-paygo.html">PAYG Sales</a></li>
                         </ul>
                     </li>
-                    <li class=" active  dropdown">
+                    <li class=" dropdown">
                         <a href="customers.html" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Customers <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="customers-prospect">
                             <li><a href="customers.html">Customers</a></li>
@@ -83,25 +83,25 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="dropdown">
-                    <h3>All Customers</h3>
+                    <h3>Partners</h3>
                 </div>
             </div>
             <div class="col-sm-9">
                 <div class="filter text-right full-width">
     <ul class="list-inline">
         
-        <li><button class="btn btn-default btn-sm"><strong>Payment Type</strong> <span class="caret"></span></button></li>
+        
         <li><button class="btn btn-default btn-sm">List 10 <span class="caret"></span></button></li></li>
         <li><input class="form-control input-sm" type="text" placeholder="Search" /></li>
         <li><button class="btn btn-default btn-sm"><i class="fa fa-calendar"></i> <strong>January 1, 2017</strong> - <strong>April 1, 2017</strong> <span class="caret"></span> </button></li>
         <li><button class="btn btn-info btn-sm"><strong>Export</strong></button></li>
         
-        <li><button class="btn bg-primary btn-sm" data-toggle="modal" data-target="#customer-new"><strong>+ New Prospect</strong></button></li>
         
         
         
         
         
+        <li><button class="btn btn-success btn-sm" data-toggle="modal" data-target="#partners-new"><strong>New Partner</strong></button></li>
     </ul>
 </div>
             </div>
@@ -113,49 +113,20 @@
                     <thead>
                     <tr>
                         <th class="text-center">#</th>
-                        <th>Customer</th>
-                        <th>ID Number</th>
-                        <th>Phone Number</th>
-                        <th>Location</th>
-                        <th>Credit Check</th>
-                        <th>CRB Check</th>
-                        <th>Date Created</th>
-                        <th>Actions</th>
+                        <th>Partner</th>
+                        <th>Region</th>
+                        <th class="text-center">Actions</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td class="text-center">1</td>
-                        <td><a href="customers-details.html"><strong>Mary Wambui</strong></a></td>
-                        <td>2392832232</td>
-                        <td>0712 345678</td>
-                        <td>Nairobi South</td>
-                        <td><span class="text-success"><i class="fa fa-check"></i> Approved</span></td>
-                        <td>435</td>
-                        <td>29 March 2017</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">2</td>
-                        <td><a href="customers-details-2.html"><strong>Tyrese Gibson</strong></a></td>
-                        <td>2392832232</td>
-                        <td>0712 345678</td>
-                        <td>Nairobi South</td>
-                        <td></td>
-                        <td>435</td>
-                        <td>29 March 2017</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">3</td>
-                        <td><a href="customers-details-2.html"><strong>Nicholas Njenga</strong></a></td>
-                        <td>2392832232</td>
-                        <td>0712 345678</td>
-                        <td>Nairobi South</td>
-                        <td><span class="text-danger"><i class="fa fa-close"></i> Not Approved</span></td>
-                        <td>435</td>
-                        <td>29 March 2017</td>
-                        <td></td>
+                        <td>Nairobi Partner</td>
+                        <td>Nairobi</td>
+                        <td class="text-center">
+                            <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#removal-partner">Remove</button>
+                            <button class="btn btn-info btn-sm">Disable</button>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
@@ -174,44 +145,6 @@
         </div>
     </section>
 
-<div class="modal fade" tabindex="-1" role="dialog" id="customer-new">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header bg-primary">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Add Prospect</h4>
-            </div>
-            <div class="modal-body">
-                <div class="form">
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input class="form-control" placeholder="Enter title" />
-                    </div>
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <label>ID Number</label>
-                                <input class="form-control" placeholder="Enter ID" />
-                            </div>
-                            <div class="col-sm-6">
-                                <label>Phone Number</label>
-                                <input class="form-control" placeholder="Enter Phone Number" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Location</label>
-                        <input class="form-control" placeholder="Enter Location" />
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn bg-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 </div>
 <!-- Add Product -->
